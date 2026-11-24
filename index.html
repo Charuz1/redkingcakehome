@@ -1214,9 +1214,9 @@
                     </p>
 
                     <!-- GPS Auto-Detect Button -->
-                    <div class="flex flex-wrap items-center gap-2">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                       <button type="button" id="gps-tag-btn" onclick="getCurrentLocationPin()"
-                        class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-brand-crimson hover:bg-red-800 text-white font-semibold text-xs shadow-sm transition-all active:scale-95">
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-brand-crimson hover:bg-red-800 text-white font-semibold text-xs shadow-sm transition-all active:scale-95">
                         <svg id="gps-icon-default" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
@@ -1226,7 +1226,7 @@
                         </svg>
                         <span id="gps-btn-label">📍 Pin My Current GPS Location</span>
                       </button>
-                      <span class="text-xs text-brand-subtle font-medium">or</span>
+                      <span class="text-xs text-brand-subtle font-medium text-center sm:text-left">or</span>
                     </div>
 
                     <!-- Manual Google Maps / Share Link Input -->
@@ -1456,7 +1456,7 @@
                         <div class="pt-2">
                           <p class="text-[9px] uppercase tracking-widest text-amber-200/70">Card Number</p>
                           <p id="preview-card-number"
-                            class="font-mono text-lg sm:text-xl font-bold tracking-widest text-amber-100">
+                            class="font-mono text-base sm:text-xl font-bold tracking-wider sm:tracking-widest text-amber-100 truncate">
                             •••• •••• •••• ••••
                           </p>
                         </div>
@@ -1972,9 +1972,9 @@
 
   <!-- CONFIRMATION / BACKUP MODAL -->
   <div id="order-modal"
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-sm hidden overflow-y-auto">
     <div
-      class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-brand-gold/30 space-y-5 animate-float-gentle">
+      class="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-8 shadow-2xl border border-brand-gold/30 space-y-4 sm:space-y-5 animate-float-gentle my-auto max-h-[92vh] overflow-y-auto">
 
       <div class="text-center space-y-2">
         <div class="w-16 h-16 rounded-2xl overflow-hidden border border-brand-gold/40 shadow-md mx-auto p-0.5 bg-white">
@@ -2029,10 +2029,10 @@
 
   <!-- PAYMENT QR CODE FULL LIGHTBOX MODAL -->
   <div id="payment-qr-modal"
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm hidden transition-all duration-300"
+    class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm hidden transition-all duration-300 overflow-y-auto"
     onclick="closePaymentQRModal(event)">
     <div
-      class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border-2 border-brand-gold/40 space-y-4 animate-float-gentle text-center"
+      class="bg-white rounded-3xl max-w-md w-full p-4 sm:p-6 shadow-2xl border-2 border-brand-gold/40 space-y-3 sm:space-y-4 animate-float-gentle text-center my-auto max-h-[92vh] overflow-y-auto"
       onclick="event.stopPropagation()">
       <div class="flex items-center justify-between pb-2 border-b border-gray-100">
         <h4 class="font-serif-display font-bold text-base text-brand-espresso flex items-center gap-2">
@@ -2569,19 +2569,32 @@
             <h4 class="font-serif-display font-bold text-lg text-brand-gold">Bakery & Shop Location</h4>
             <span class="text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold">📍 Verified Pin</span>
           </div>
-          <div class="rounded-2xl overflow-hidden border border-white/10 h-52 bg-neutral-800 shadow-inner">
+
+          <!-- Responsive Map Frame with Touch & Viewport Optimization -->
+          <div class="rounded-2xl overflow-hidden border-2 border-brand-gold/30 h-64 sm:h-72 lg:h-60 bg-neutral-900 shadow-xl relative w-full">
             <iframe title="RedKing Cake & Technologies Location"
-              src="https://maps.google.com/maps?q=6.7415979,79.9029172(RedKing%20Technologies)&t=&z=17&ie=UTF8&iwloc=&output=embed"
-              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+              src="https://maps.google.com/maps?q=6.7415979,79.9029172(RedKing%20Technologies)&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              class="w-full h-full border-0 block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
-          <p class="text-[11px] text-white/70 flex items-center justify-between">
-            <span>Direct pickup on Maho Road</span>
+
+          <!-- Quick Navigation Actions Bar for Mobile/Desktop -->
+          <div class="grid grid-cols-2 gap-2 pt-1">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=6.7415979,79.9029172"
+              target="_blank" rel="noopener noreferrer"
+              class="py-2.5 px-3 rounded-xl bg-brand-crimson hover:bg-red-800 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95 text-center">
+              <span>🧭 Directions</span>
+            </a>
             <a href="https://www.google.com/maps/place/RedKing+Technologies/@6.7415979,79.9029172,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae24561c94ee223:0xb95c9b7f6384bf5a!8m2!3d6.7415979!4d79.9029172!16s%2Fg%2F11p0013s_0"
               target="_blank" rel="noopener noreferrer"
-              class="text-brand-gold hover:underline font-bold inline-flex items-center gap-1">
-              <span>Open in Google Maps App ↗</span>
+              class="py-2.5 px-3 rounded-xl bg-white/10 hover:bg-white/20 border border-brand-gold/40 text-brand-gold font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95 text-center">
+              <span>📍 Open Maps App ↗</span>
             </a>
+          </div>
+
+          <p class="text-[11px] text-white/60 flex items-center justify-between pt-0.5">
+            <span>Direct pickup on Maho Road</span>
+            <span class="text-white/40">Samadarapitiya, Nikaweratiya</span>
           </p>
         </div>
 
