@@ -154,14 +154,22 @@
     class="hidden bg-gradient-to-r from-amber-600 via-rose-600 to-amber-700 text-white text-xs sm:text-sm font-semibold py-2.5 px-4 text-center shadow-md relative z-50 transition-all">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
       <div class="flex items-center gap-2 mx-auto">
-        <span class="text-base">📢</span>
+        <svg class="w-4 h-4 text-white inline-block flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        </svg>
         <span id="store-closed-banner-text">Notice: Red King Cake is closed today. You can still place advance orders
           for upcoming celebrations via WhatsApp.</span>
       </div>
       <button onclick="openAdminModal()"
-        class="text-[11px] underline opacity-80 hover:opacity-100 flex-shrink-0 cursor-pointer"
+        class="text-[11px] underline opacity-80 hover:opacity-100 flex-shrink-0 cursor-pointer inline-flex items-center gap-1"
         title="Admin Store Controls">
-        Admin ⚙️
+        <span>Admin</span>
+        <svg class="w-3.5 h-3.5 inline-block opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
       </button>
     </div>
   </div>
@@ -294,7 +302,13 @@
           <!-- Premier Badge -->
           <div
             class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-cream border border-brand-gold/25 text-brand-gold text-xs sm:text-sm font-bold shadow-sm">
-            <span>👑 Nikaweratiya's Premier Custom Celebration Bakery</span>
+            <svg class="w-4 h-4 text-amber-500 fill-amber-400/30 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18h18l-2-10-4.5 5L12 5l-2.5 8L5 8l-2 10z"/>
+              <circle cx="3" cy="8" r="0.75" fill="currentColor"/>
+              <circle cx="12" cy="5" r="0.75" fill="currentColor"/>
+              <circle cx="21" cy="8" r="0.75" fill="currentColor"/>
+            </svg>
+            <span>Nikaweratiya's Premier Custom Celebration Bakery</span>
           </div>
 
           <!-- Main Heading -->
@@ -325,61 +339,123 @@
               <!-- Cup Cakes & Sets -->
               <button type="button" onclick="quickSelectShopItem('Cup Cake', 'cupcake')"
                 class="px-3.5 py-2 rounded-xl bg-white border border-brand-gold/30 hover:border-brand-crimson hover:bg-brand-cream/80 text-xs sm:text-sm font-semibold text-brand-espresso transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🧁</span> <span>Cup Cake</span>
+                <svg class="w-4 h-4 text-amber-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 11h14l-1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H8a1.5 1.5 0 0 1-1.5-1.5L5 11z"/>
+                  <path d="M5 11c0-2.5 1.5-4 3.5-4 1.5 0 2.5 1 3.5 1s2-1 3.5-1c2 0 3.5 1.5 3.5 4"/>
+                  <circle cx="12" cy="4" r="1.5" fill="currentColor"/>
+                </svg>
+                <span>Cup Cake</span>
               </button>
 
               <button type="button" onclick="quickSelectShopItem('Choco Cup', 'cupcake')"
                 class="px-3.5 py-2 rounded-xl bg-white border border-brand-gold/30 hover:border-brand-crimson hover:bg-brand-cream/80 text-xs sm:text-sm font-semibold text-brand-espresso transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🍫</span> <span>Choco Cup</span>
+                <svg class="w-4 h-4 text-amber-900 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 11h14l-1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H8a1.5 1.5 0 0 1-1.5-1.5L5 11z"/>
+                  <path d="M5 11c0-2.5 1.5-4 3.5-4 1.5 0 2.5 1 3.5 1s2-1 3.5-1c2 0 3.5 1.5 3.5 4"/>
+                  <path d="M8 15h8"/>
+                  <circle cx="12" cy="4" r="1.5" fill="currentColor"/>
+                </svg>
+                <span>Choco Cup</span>
               </button>
 
               <button type="button" onclick="quickSelectShopItem('Mix Cup', 'cupcake')"
                 class="px-3.5 py-2 rounded-xl bg-white border border-brand-gold/30 hover:border-brand-crimson hover:bg-brand-cream/80 text-xs sm:text-sm font-semibold text-brand-espresso transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🎨</span> <span>Mix Cup</span>
+                <svg class="w-4 h-4 text-rose-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C6.5 2 2 6.5 2 12c0 4.5 3.5 8 8 8 1 0 1.5-.5 1.5-1.5 0-.5-.2-.9-.5-1.3-.3-.4-.5-.9-.5-1.4 0-1.1.9-2 2-2h2.5c3.6 0 6.5-2.9 6.5-6.5C22 5.5 17.5 2 12 2z"/>
+                  <circle cx="7.5" cy="10.5" r="1" fill="currentColor"/>
+                  <circle cx="11.5" cy="7.5" r="1" fill="currentColor"/>
+                  <circle cx="16.5" cy="9.5" r="1" fill="currentColor"/>
+                </svg>
+                <span>Mix Cup</span>
               </button>
 
               <button type="button" onclick="quickSelectShopItem('Butter Cup', 'cupcake')"
                 class="px-3.5 py-2 rounded-xl bg-white border border-brand-gold/30 hover:border-brand-crimson hover:bg-brand-cream/80 text-xs sm:text-sm font-semibold text-brand-espresso transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🧈</span> <span>Butter Cup</span>
+                <svg class="w-4 h-4 text-amber-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 15h18l-1.5 4H4.5L3 15z"/>
+                  <path d="M6 15l2-7h8l2 7"/>
+                  <path d="M8 8l1-3h6l1 3"/>
+                </svg>
+                <span>Butter Cup</span>
               </button>
 
               <button type="button" onclick="quickSelectShopItem('Mini Cup Cake Set', 'cupcake-set')"
                 class="px-3.5 py-2 rounded-xl bg-white border border-brand-gold/30 hover:border-brand-crimson hover:bg-brand-cream/80 text-xs sm:text-sm font-semibold text-brand-espresso transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🎁</span> <span>Mini Cup Cake Set</span>
+                <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="9" width="18" height="12" rx="2"/>
+                  <rect x="2" y="5" width="20" height="4" rx="1"/>
+                  <line x1="12" y1="5" x2="12" y2="21"/>
+                  <path d="M12 5c-1.5-2-4-2.5-4-.5s3.5 2.5 4 2.5c.5 0 4-.5 4-2.5s-2.5-1.5-4 .5z"/>
+                </svg>
+                <span>Mini Cup Cake Set</span>
               </button>
 
               <!-- Celebration Cakes -->
               <button type="button" onclick="quickSelectShopItem('Ribbon Cake', 'cake')"
                 class="px-3.5 py-2 rounded-xl bg-white border border-brand-gold/30 hover:border-brand-crimson hover:bg-brand-cream/80 text-xs sm:text-sm font-semibold text-brand-espresso transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🎀</span> <span>Ribbon Cake</span>
+                <svg class="w-4 h-4 text-rose-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 11h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a1 1 0 0 1 1-1z"/>
+                  <path d="M2 15h20"/>
+                  <path d="M7 11c-.5-2-2.5-4-4.5-2s2 4 4.5 2z"/>
+                  <path d="M17 11c.5-2 2.5-4 4.5-2s-2 4-4.5 2z"/>
+                </svg>
+                <span>Ribbon Cake</span>
               </button>
 
               <button type="button" onclick="quickSelectShopItem('Chocolate Cake', 'cake')"
                 class="px-3.5 py-2 rounded-xl bg-white border border-brand-gold/30 hover:border-brand-crimson hover:bg-brand-cream/80 text-xs sm:text-sm font-semibold text-brand-espresso transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🍫</span> <span>Chocolate Cake</span>
+                <svg class="w-4 h-4 text-amber-900 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <line x1="3" y1="12" x2="21" y2="12"/>
+                  <line x1="9" y1="4" x2="9" y2="20"/>
+                  <line x1="15" y1="4" x2="15" y2="20"/>
+                </svg>
+                <span>Chocolate Cake</span>
               </button>
 
               <button type="button" onclick="quickSelectShopItem('Butter Cake', 'cake')"
                 class="px-3.5 py-2 rounded-xl bg-white border border-brand-gold/30 hover:border-brand-crimson hover:bg-brand-cream/80 text-xs sm:text-sm font-semibold text-brand-espresso transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🍰</span> <span>Butter Cake</span>
+                <svg class="w-4 h-4 text-amber-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16l-18 4V9l18-5v12z"/>
+                  <path d="M3 14l18-5"/>
+                  <circle cx="12" cy="4" r="1.5" fill="currentColor"/>
+                </svg>
+                <span>Butter Cake</span>
               </button>
 
               <button type="button" onclick="quickSelectShopItem('Bento Cake', 'bento')"
                 class="px-3.5 py-2 rounded-xl bg-amber-50/80 border border-amber-300 hover:border-brand-crimson hover:bg-amber-100 text-xs sm:text-sm font-bold text-amber-900 transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🍱</span> <span>Bento Cake</span>
+                <svg class="w-4 h-4 text-amber-700 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="3"/>
+                  <line x1="3" y1="11" x2="21" y2="11"/>
+                  <path d="M12 11v8"/>
+                  <path d="M8 8.5c-.5 0-1-.5-1-1s1-1.5 1.5-.5c.5-1 1.5-.5 1.5.5s-.5 1-1 1z" fill="currentColor"/>
+                </svg>
+                <span>Bento Cake</span>
               </button>
 
               <!-- Celebration Sarasili & Candles -->
               <button type="button" onclick="quickSelectShopItem('Birthday Sarasili Item', 'party')"
                 title="Birthday Party Decorations, Banners & Accessories"
                 class="px-3.5 py-2 rounded-xl bg-rose-50/80 border border-rose-200 hover:border-brand-crimson hover:bg-rose-100 text-xs sm:text-sm font-semibold text-rose-900 transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🎉</span> <span>Birthday Sarasili Items</span>
+                <svg class="w-4 h-4 text-rose-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 20l7-17 9 14-16 3z"/>
+                  <path d="M7 16c2-1 4-1 6 0"/>
+                  <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                  <circle cx="5" cy="7" r="1" fill="currentColor"/>
+                </svg>
+                <span>Birthday Sarasili Items</span>
               </button>
 
               <button type="button" onclick="quickSelectShopItem('Candles', 'party')"
                 title="Party Candles, Number Candles & Sparklers"
                 class="px-3.5 py-2 rounded-xl bg-amber-50/80 border border-amber-200 hover:border-brand-crimson hover:bg-amber-100 text-xs sm:text-sm font-semibold text-amber-900 transition-all shadow-xs hover:shadow hover:-translate-y-0.5 flex items-center gap-1.5">
-                <span>🕯️</span> <span>Candles</span>
+                <svg class="w-4 h-4 text-amber-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="10" width="6" height="11" rx="1.5"/>
+                  <line x1="12" y1="10" x2="12" y2="7"/>
+                  <path d="M12 2c-1.5 2-2 3.5-1 4.5s2 1 2 0c1-1 .5-2.5-1-4.5z" fill="currentColor"/>
+                </svg>
+                <span>Candles</span>
               </button>
             </div>
           </div>
@@ -521,8 +597,11 @@
 
             <!-- Floating Badge 1 (Top Right) -->
             <div
-              class="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-brand-gold/30 flex items-center gap-2 animate-float-delayed">
-              <span class="text-xl">✨</span>
+              class="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-brand-gold/30 flex items-center gap-2.5 animate-float-delayed">
+              <svg class="w-5 h-5 text-brand-gold flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l2.4 6.8 6.8 2.4-6.8 2.4L12 20.4l-2.4-6.8-6.8-2.4 6.8-2.4z"/>
+                <circle cx="19" cy="5" r="1" fill="currentColor"/>
+              </svg>
               <div>
                 <p class="text-[10px] uppercase font-bold text-brand-subtle tracking-wide">Authentic Bakes</p>
                 <p class="text-xs font-extrabold text-brand-espresso">100% Real Customer Photos</p>
@@ -534,7 +613,10 @@
               class="absolute -bottom-6 -left-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-brand-gold/30 flex items-center gap-3 animate-float-gentle">
               <div
                 class="w-9 h-9 rounded-full bg-brand-whatsapp/10 text-brand-whatsapp flex items-center justify-center font-bold">
-                📱
+                <svg class="w-5 h-5 text-brand-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2.5"/>
+                  <line x1="12" y1="18" x2="12.01" y2="18"/>
+                </svg>
               </div>
               <div>
                 <p class="text-[11px] font-bold text-brand-espresso">Direct WhatsApp Orders</p>
@@ -767,7 +849,9 @@
               Tall Cakes</span>
           </div>
           <div class="flex items-center gap-1.5">
-            <span class="text-xs">🌟</span>
+            <svg class="w-4 h-4 text-amber-500 fill-amber-400/20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
             <p
               class="font-serif-display font-bold text-xs sm:text-sm text-brand-espresso group-hover:text-brand-crimson transition-colors truncate">
               Premium Quality</p>
@@ -786,7 +870,12 @@
               Designs</span>
           </div>
           <div class="flex items-center gap-1.5">
-            <span class="text-xs">🎨</span>
+            <svg class="w-4 h-4 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.5 2 2 6.5 2 12c0 4.5 3.5 8 8 8 1 0 1.5-.5 1.5-1.5 0-.5-.2-.9-.5-1.3-.3-.4-.5-.9-.5-1.4 0-1.1.9-2 2-2h2.5c3.6 0 6.5-2.9 6.5-6.5C22 5.5 17.5 2 12 2z"/>
+              <circle cx="7.5" cy="10.5" r="1" fill="currentColor"/>
+              <circle cx="11.5" cy="7.5" r="1" fill="currentColor"/>
+              <circle cx="16.5" cy="9.5" r="1" fill="currentColor"/>
+            </svg>
             <p
               class="font-serif-display font-bold text-xs sm:text-sm text-brand-espresso group-hover:text-brand-crimson transition-colors truncate">
               Design Cakes</p>
@@ -805,7 +894,11 @@
               Designs</span>
           </div>
           <div class="flex items-center gap-1.5">
-            <span class="text-xs">💍</span>
+            <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="14" r="5"/>
+              <circle cx="15" cy="12" r="5"/>
+              <path d="M9 5l1.5-2h-3L9 5z" fill="currentColor"/>
+            </svg>
             <p
               class="font-serif-display font-bold text-xs sm:text-sm text-brand-espresso group-hover:text-brand-crimson transition-colors truncate">
               Wedding & Bride</p>
@@ -824,7 +917,16 @@
               Designs</span>
           </div>
           <div class="flex items-center gap-1.5">
-            <span class="text-xs">🎂</span>
+            <svg class="w-4 h-4 text-brand-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a1 1 0 0 1 1-1z"/>
+              <path d="M4 15c2 1 4 1 6 0s4-1 6 0 4 1 4 0"/>
+              <line x1="8" y1="11" x2="8" y2="7"/>
+              <line x1="12" y1="11" x2="12" y2="7"/>
+              <line x1="16" y1="11" x2="16" y2="7"/>
+              <circle cx="8" cy="5" r="1" fill="currentColor"/>
+              <circle cx="12" cy="5" r="1" fill="currentColor"/>
+              <circle cx="16" cy="5" r="1" fill="currentColor"/>
+            </svg>
             <p
               class="font-serif-display font-bold text-xs sm:text-sm text-brand-espresso group-hover:text-brand-crimson transition-colors truncate">
               Birthday Cakes</p>
@@ -843,7 +945,12 @@
               Hampers</span>
           </div>
           <div class="flex items-center gap-1.5">
-            <span class="text-xs">🎁</span>
+            <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="9" width="18" height="12" rx="2"/>
+              <rect x="2" y="5" width="20" height="4" rx="1"/>
+              <line x1="12" y1="5" x2="12" y2="21"/>
+              <path d="M12 5c-1.5-2-4-2.5-4-.5s3.5 2.5 4 2.5c.5 0 4-.5 4-2.5s-2.5-1.5-4 .5z"/>
+            </svg>
             <p
               class="font-serif-display font-bold text-xs sm:text-sm text-brand-espresso group-hover:text-brand-crimson transition-colors truncate">
               Combos & Gifts</p>
@@ -855,7 +962,12 @@
       <!-- SEARCH BAR & LIVE RESULTS BAR -->
       <div class="max-w-xl mx-auto mb-6">
         <div class="relative flex items-center">
-          <span class="absolute left-4 text-brand-subtle text-base select-none pointer-events-none">🔍</span>
+          <span class="absolute left-4 text-brand-subtle select-none pointer-events-none">
+            <svg class="w-4 h-4 text-brand-subtle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </span>
           <input type="text" id="cake-search-input" oninput="searchCakes(this.value)"
             placeholder="Search cakes by name, theme, or flavor (e.g. Barbie, Drip, McQueen, Wedding)..."
             class="w-full pl-11 pr-28 py-3.5 rounded-2xl border border-brand-gold/30 bg-white/95 backdrop-blur-md text-xs sm:text-sm text-brand-espresso placeholder-brand-subtle/70 focus:outline-none focus:ring-2 focus:ring-brand-crimson/40 focus:border-brand-crimson shadow-sm transition-all">
@@ -877,32 +989,56 @@
       <div id="gallery-tabs-anchor" class="flex flex-wrap items-center justify-center gap-2 mb-10">
         <button onclick="filterCakes('all')" data-cat="all"
           class="category-btn active px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-brand-crimson text-white shadow-md flex items-center gap-1.5">
-          <span>✨ All Creations</span>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l2.4 6.8 6.8 2.4-6.8 2.4L12 20.4l-2.4-6.8-6.8-2.4 6.8-2.4z"/>
+          </svg>
+          <span>All Creations</span>
           <span class="text-[11px] opacity-80">(37)</span>
         </button>
         <button onclick="filterCakes('premium')" data-cat="premium"
           class="category-btn px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white border border-brand-gold/25 text-brand-espresso hover:bg-brand-cream flex items-center gap-1.5">
-          <span>🌟 Premium Quality</span>
+          <svg class="w-3.5 h-3.5 text-amber-500 fill-amber-400" viewBox="0 0 24 24">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <span>Premium Quality</span>
           <span class="text-[11px] text-brand-crimson font-bold">(Rs. 5,500+)</span>
         </button>
         <button onclick="filterCakes('design')" data-cat="design"
           class="category-btn px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white border border-brand-gold/25 text-brand-espresso hover:bg-brand-cream flex items-center gap-1.5">
-          <span>🎨 Design Cakes</span>
+          <svg class="w-3.5 h-3.5 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.5 2 2 6.5 2 12c0 4.5 3.5 8 8 8 1 0 1.5-.5 1.5-1.5 0-.5-.2-.9-.5-1.3-.3-.4-.5-.9-.5-1.4 0-1.1.9-2 2-2h2.5c3.6 0 6.5-2.9 6.5-6.5C22 5.5 17.5 2 12 2z"/>
+          </svg>
+          <span>Design Cakes</span>
           <span class="text-[11px] text-brand-gold font-bold">(Rs. 4,500+)</span>
         </button>
         <button onclick="filterCakes('wedding')" data-cat="wedding"
           class="category-btn px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white border border-brand-gold/25 text-brand-espresso hover:bg-brand-cream flex items-center gap-1.5">
-          <span>💍 Wedding & Bride</span>
+          <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="14" r="5"/>
+            <circle cx="15" cy="12" r="5"/>
+          </svg>
+          <span>Wedding & Bride</span>
           <span class="text-[11px] text-amber-700 font-bold">(Rs. 5,500+)</span>
         </button>
         <button onclick="filterCakes('birthday')" data-cat="birthday"
           class="category-btn px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white border border-brand-gold/25 text-brand-espresso hover:bg-brand-cream flex items-center gap-1.5">
-          <span>🎂 Birthday Cakes</span>
+          <svg class="w-3.5 h-3.5 text-brand-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11h16v9H4z"/>
+            <path d="M4 15h16"/>
+            <line x1="8" y1="11" x2="8" y2="7"/>
+            <line x1="12" y1="11" x2="12" y2="7"/>
+            <line x1="16" y1="11" x2="16" y2="7"/>
+          </svg>
+          <span>Birthday Cakes</span>
           <span class="text-[11px] text-brand-subtle">(5)</span>
         </button>
         <button onclick="filterCakes('combo')" data-cat="combo"
           class="category-btn px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white border border-brand-gold/25 text-brand-espresso hover:bg-brand-cream flex items-center gap-1.5">
-          <span>🎁 Combos & Gifts</span>
+          <svg class="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="9" width="18" height="12" rx="2"/>
+            <line x1="12" y1="5" x2="12" y2="21"/>
+          </svg>
+          <span>Combos & Gifts</span>
           <span class="text-[11px] text-brand-subtle">(8)</span>
         </button>
       </div>
@@ -917,8 +1053,13 @@
         class="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-50 via-brand-cream to-rose-50 border border-brand-gold/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
         <div class="flex items-center gap-4 text-center md:text-left">
           <div
-            class="w-14 h-14 rounded-2xl bg-brand-crimson/10 text-brand-crimson flex items-center justify-center text-3xl flex-shrink-0 mx-auto md:mx-0">
-            🎨
+            class="w-14 h-14 rounded-2xl bg-brand-crimson/10 text-brand-crimson flex items-center justify-center flex-shrink-0 mx-auto md:mx-0">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.5 2 2 6.5 2 12c0 4.5 3.5 8 8 8 1 0 1.5-.5 1.5-1.5 0-.5-.2-.9-.5-1.3-.3-.4-.5-.9-.5-1.4 0-1.1.9-2 2-2h2.5c3.6 0 6.5-2.9 6.5-6.5C22 5.5 17.5 2 12 2z"/>
+              <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"/>
+              <circle cx="11.5" cy="7.5" r="1.5" fill="currentColor"/>
+              <circle cx="16.5" cy="9.5" r="1.5" fill="currentColor"/>
+            </svg>
           </div>
           <div>
             <h4 class="font-serif-display font-bold text-lg sm:text-xl text-brand-espresso">Looking for a Unique Bespoke
@@ -973,7 +1114,11 @@
             <!-- Store Closed Notice (Shown when Admin marks bakery Closed Today) -->
             <div id="form-closed-notice"
               class="hidden p-4 rounded-2xl bg-amber-50 border border-amber-300 text-amber-900 text-xs sm:text-sm flex items-start gap-3 shadow-xs">
-              <span class="text-xl">⚠️</span>
+              <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
               <div>
                 <p class="font-bold">Bakery Closed Today - Advance Orders Welcome</p>
                 <p class="mt-0.5 text-amber-800" id="form-closed-notice-text">
@@ -1066,13 +1211,13 @@
                         (LKR 4,500 - 5,500)</option>
                       <option value="500g Standard Celebration Cake (LKR 2,800 - 3,500)">500g Standard Celebration Cake
                         (LKR 2,800 - 3,500)</option>
-                      <option value="Bento Cake / Mini Lunchbox Cake (LKR 1,800 - 2,800)">🍱 Bento Cake / Mini Lunchbox
+                      <option value="Bento Cake / Mini Lunchbox Cake (LKR 1,800 - 2,800)">Bento Cake / Mini Lunchbox
                         Cake (LKR 1,800 - 2,800)</option>
-                      <option value="Box of 6 Cupcakes / Jar Cakes (LKR 1,800 - 3,500)">🧁 Box of 6 Cupcakes / Jar Cakes
+                      <option value="Box of 6 Cupcakes / Jar Cakes (LKR 1,800 - 3,500)">Box of 6 Cupcakes / Jar Cakes
                         (LKR 1,800 - 3,500)</option>
-                      <option value="Mini Cup Cake Set / Daily Cupcakes (LKR 1,500 - 3,000)">🎁 Mini Cup Cake Set /
+                      <option value="Mini Cup Cake Set / Daily Cupcakes (LKR 1,500 - 3,000)">Mini Cup Cake Set /
                         Assorted Cupcakes (LKR 1,500 - 3,000)</option>
-                      <option value="Birthday Sarasili & Candles / Party Deco Set">🎉 Birthday Sarasili & Party Candles
+                      <option value="Birthday Sarasili & Candles / Party Deco Set">Birthday Sarasili & Party Candles
                         / Accessories</option>
                     </select>
                   </div>
@@ -1148,16 +1293,27 @@
                       <label for="ful-pickup"
                         class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 cursor-pointer hover:border-brand-crimson transition-all">
                         <div
-                          class="w-8 h-8 rounded-full bg-brand-cream text-brand-crimson flex items-center justify-center font-bold text-sm">
-                          🏪</div>
+                          class="w-8 h-8 rounded-full bg-brand-cream text-brand-crimson flex items-center justify-center font-bold">
+                          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l2-5h14l2 5"/>
+                            <path d="M21 9a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0"/>
+                            <path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/>
+                            <rect x="9" y="15" width="6" height="6"/>
+                          </svg>
+                        </div>
                         <div>
                           <p class="font-bold text-xs sm:text-sm text-brand-espresso">Store Pickup (Free)</p>
                           <div class="flex items-center gap-2">
                             <p class="text-[11px] text-brand-subtle">Maho Road, Nikaweratiya</p>
                             <a href="https://www.google.com/maps/place/Redking+Cake+Nikaweratiya/@7.7569164,80.0883314,14z/data=!4m10!1m2!2m1!1scake+nikaweratiya!3m6!1s0x3afd27dfbfc3f113:0x4394c5dc686d325!8m2!3d7.7569164!4d80.1264402!16s%2Fg%2F11scy85jrx"
                               target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()"
-                              class="text-[10px] text-brand-crimson font-semibold hover:underline">
-                              🗺️ Map ↗
+                              class="text-[10px] text-brand-crimson font-semibold hover:underline inline-flex items-center gap-1">
+                              <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                                <line x1="8" y1="2" x2="8" y2="18"/>
+                                <line x1="16" y1="6" x2="16" y2="22"/>
+                              </svg>
+                              <span>Map ↗</span>
                             </a>
                           </div>
                         </div>
@@ -1170,8 +1326,14 @@
                       <label for="ful-delivery"
                         class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 cursor-pointer hover:border-brand-crimson transition-all">
                         <div
-                          class="w-8 h-8 rounded-full bg-brand-cream text-brand-crimson flex items-center justify-center font-bold text-sm">
-                          🚚</div>
+                          class="w-8 h-8 rounded-full bg-brand-cream text-brand-crimson flex items-center justify-center font-bold">
+                          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="6" width="13" height="10" rx="1.5"/>
+                            <path d="M15 9h4l2 3.5v3.5h-6V9z"/>
+                            <circle cx="6" cy="18" r="2"/>
+                            <circle cx="18" cy="18" r="2"/>
+                          </svg>
+                        </div>
                         <div>
                           <p class="font-bold text-xs sm:text-sm text-brand-espresso">Home Delivery</p>
                           <p class="text-[11px] text-brand-subtle">Nikaweratiya & surrounding areas</p>
@@ -1217,14 +1379,15 @@
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                       <button type="button" id="gps-tag-btn" onclick="getCurrentLocationPin()"
                         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-brand-crimson hover:bg-red-800 text-white font-semibold text-xs shadow-sm transition-all active:scale-95">
-                        <svg id="gps-icon-default" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                          <circle cx="12" cy="9" r="2.5"/>
                         </svg>
                         <svg id="gps-icon-spinner" class="hidden animate-spin w-4 h-4 text-white" fill="none" viewBox="0 0 24 24">
                           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
                         </svg>
-                        <span id="gps-btn-label">📍 Pin My Current GPS Location</span>
+                        <span id="gps-btn-label">Pin My Current GPS Location</span>
                       </button>
                       <span class="text-xs text-brand-subtle font-medium text-center sm:text-left">or</span>
                     </div>
@@ -1239,11 +1402,21 @@
                     <!-- Tagged Pin Preview Card (Active State) -->
                     <div id="location-pin-preview" class="hidden p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between text-xs">
                       <div class="flex items-center gap-2 min-w-0 pr-2">
-                        <span class="text-emerald-600 font-bold text-sm">📍</span>
+                        <span class="text-emerald-600 font-bold text-sm">
+                          <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                          </svg>
+                        </span>
                         <div class="min-w-0">
                           <span class="font-bold text-emerald-800 block truncate">Location Pin Attached</span>
-                          <a id="location-map-link-btn" href="#" target="_blank" rel="noopener noreferrer" class="text-[11px] text-emerald-700 underline truncate block hover:text-emerald-900">
-                            🗺️ Test Open in Google Maps ↗
+                          <a id="location-map-link-btn" href="#" target="_blank" rel="noopener noreferrer" class="text-[11px] text-emerald-700 underline truncate block hover:text-emerald-900 inline-flex items-center gap-1">
+                            <svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                              <line x1="8" y1="2" x2="8" y2="18"/>
+                              <line x1="16" y1="6" x2="16" y2="22"/>
+                            </svg>
+                            <span>Test Open in Google Maps ↗</span>
                           </a>
                         </div>
                       </div>
@@ -1298,7 +1471,11 @@
                 <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-brand-gold/20">
                   <button type="button" onclick="switchToCustomUpload()"
                     class="px-3.5 py-2 rounded-xl bg-white hover:bg-gray-100 border border-brand-gold/40 text-brand-espresso text-xs font-bold transition-all flex items-center gap-1.5 shadow-xs cursor-pointer">
-                    <span>📷 Upload My Own Photo Instead</span>
+                    <svg class="w-4 h-4 text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                      <circle cx="12" cy="13" r="4"/>
+                    </svg>
+                    <span>Upload My Own Photo Instead</span>
                   </button>
                   <a href="#gallery"
                     class="px-3.5 py-2 rounded-xl bg-brand-cream/80 hover:bg-brand-cream text-brand-espresso text-xs font-semibold transition-all">
@@ -1314,8 +1491,11 @@
 
                 <div id="drop-prompt" class="space-y-2">
                   <div
-                    class="w-12 h-12 rounded-full bg-brand-cream text-brand-crimson mx-auto flex items-center justify-center text-2xl">
-                    📸
+                    class="w-12 h-12 rounded-full bg-brand-cream text-brand-crimson mx-auto flex items-center justify-center">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                      <circle cx="12" cy="13" r="4"/>
+                    </svg>
                   </div>
                   <p class="text-sm font-semibold text-brand-espresso">
                     Click to select or drag & drop custom cake photo
@@ -1364,7 +1544,10 @@
                     class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 cursor-pointer hover:border-brand-crimson transition-all">
                     <div
                       class="w-8 h-8 rounded-full bg-brand-cream text-brand-whatsapp flex items-center justify-center font-bold text-sm">
-                      💬</div>
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                      </svg>
+                    </div>
                     <div>
                       <p class="font-bold text-xs sm:text-sm text-brand-espresso">Confirm Price via WhatsApp First</p>
                       <p class="text-[11px] text-brand-subtle">Review design, weight & finalize details before sending
@@ -1381,7 +1564,12 @@
                     class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 cursor-pointer hover:border-brand-crimson transition-all">
                     <div
                       class="w-8 h-8 rounded-full bg-brand-cream text-brand-gold flex items-center justify-center font-bold text-sm">
-                      💳</div>
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="5" width="20" height="14" rx="2.5"/>
+                        <line x1="2" y1="10" x2="22" y2="10"/>
+                        <line x1="6" y1="15" x2="10" y2="15"/>
+                      </svg>
+                    </div>
                     <div>
                       <p class="font-bold text-xs sm:text-sm text-brand-espresso">Pay Advance via Bank Transfer / Card
                         (LankaQR)</p>
@@ -1400,7 +1588,17 @@
                     <div class="flex items-center justify-between pb-2 border-b border-brand-gold/20 flex-wrap gap-2">
                       <div class="flex items-center gap-2">
                         <span
-                          class="w-7 h-7 rounded-lg bg-brand-crimson/10 text-brand-crimson flex items-center justify-center font-bold text-sm">🏛️</span>
+                          class="w-7 h-7 rounded-lg bg-brand-crimson/10 text-brand-crimson flex items-center justify-center font-bold text-sm">
+                          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 22 7 12 2"/>
+                            <line x1="4" y1="7" x2="4" y2="17"/>
+                            <line x1="9" y1="7" x2="9" y2="17"/>
+                            <line x1="15" y1="7" x2="15" y2="17"/>
+                            <line x1="20" y1="7" x2="20" y2="17"/>
+                            <line x1="2" y1="17" x2="22" y2="17"/>
+                            <line x1="1" y1="21" x2="23" y2="21"/>
+                          </svg>
+                        </span>
                         <div>
                           <h4 class="text-xs sm:text-sm font-bold text-brand-espresso uppercase tracking-wider">Official
                             Bakery Accounts & Payment</h4>
@@ -1418,16 +1616,35 @@
                       class="grid grid-cols-3 gap-1.5 p-1 bg-amber-100/70 rounded-xl text-xs font-bold text-brand-espresso">
                       <button type="button" onclick="switchPayTab('card')" id="pay-tab-btn-card"
                         class="py-2.5 px-2 rounded-lg bg-brand-crimson text-white shadow-xs transition-all flex items-center justify-center gap-1.5">
-                        <span class="text-sm">💳</span> <span class="hidden sm:inline">Debit/Credit</span>
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="5" width="20" height="14" rx="2.5"/>
+                          <line x1="2" y1="10" x2="22" y2="10"/>
+                          <line x1="6" y1="15" x2="10" y2="15"/>
+                        </svg>
+                        <span class="hidden sm:inline">Debit/Credit</span>
                         <span>Card</span>
                       </button>
                       <button type="button" onclick="switchPayTab('qr')" id="pay-tab-btn-qr"
                         class="py-2.5 px-2 rounded-lg bg-transparent hover:bg-white/70 text-brand-espresso transition-all flex items-center justify-center gap-1.5">
-                        <span class="text-sm">📲</span> <span>LankaQR</span>
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="5" y="2" width="14" height="20" rx="3"/>
+                          <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/>
+                          <rect x="9" y="6" width="6" height="6" rx="1"/>
+                        </svg>
+                        <span>LankaQR</span>
                       </button>
                       <button type="button" onclick="switchPayTab('bank')" id="pay-tab-btn-bank"
                         class="py-2.5 px-2 rounded-lg bg-transparent hover:bg-white/70 text-brand-espresso transition-all flex items-center justify-center gap-1.5">
-                        <span class="text-sm">🏛️</span> <span>Bank Transfer</span>
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                          <polygon points="12 2 2 7 22 7 12 2"/>
+                          <line x1="4" y1="7" x2="4" y2="17"/>
+                          <line x1="9" y1="7" x2="9" y2="17"/>
+                          <line x1="15" y1="7" x2="15" y2="17"/>
+                          <line x1="20" y1="7" x2="20" y2="17"/>
+                          <line x1="2" y1="17" x2="22" y2="17"/>
+                          <line x1="1" y1="21" x2="23" y2="21"/>
+                        </svg>
+                        <span>Bank Transfer</span>
                       </button>
                     </div>
 
@@ -1500,7 +1717,13 @@
                             <input type="text" id="card-number-input" placeholder="4xxx xxxx xxxx xxxx" maxlength="19"
                               oninput="handleCardNumberInput(this)"
                               class="w-full pl-3.5 pr-10 py-2.5 rounded-xl border border-gray-200 font-mono text-xs focus:border-brand-crimson bg-brand-ivory/40">
-                            <span class="absolute right-3 top-2.5 text-sm" id="card-input-icon">💳</span>
+                            <span class="absolute right-3 top-2.5 text-sm text-brand-gold" id="card-input-icon">
+                              <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="5" width="20" height="14" rx="2.5"/>
+                                <line x1="2" y1="10" x2="22" y2="10"/>
+                                <line x1="6" y1="15" x2="10" y2="15"/>
+                              </svg>
+                            </span>
                           </div>
                         </div>
 
@@ -1539,8 +1762,11 @@
                               LKR 1,500
                             </button>
                             <button type="button" onclick="selectCardAdvance(2000, this)"
-                              class="advance-chip py-1.5 px-2 rounded-lg border-2 border-brand-crimson bg-brand-crimson/5 text-xs font-bold text-brand-crimson transition-all">
-                              LKR 2,000 ★
+                              class="advance-chip py-1.5 px-2 rounded-lg border-2 border-brand-crimson bg-brand-crimson/5 text-xs font-bold text-brand-crimson transition-all flex items-center justify-center gap-1">
+                              <span>LKR 2,000</span>
+                              <svg class="w-3 h-3 text-amber-500 fill-amber-400" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                              </svg>
                             </button>
                             <button type="button" onclick="selectCardAdvance(3000, this)"
                               class="advance-chip py-1.5 px-2 rounded-lg border border-gray-200 hover:border-brand-crimson text-xs font-bold text-brand-espresso bg-white transition-all">
@@ -1555,14 +1781,30 @@
                         <div class="pt-2">
                           <button type="button" id="pay-card-btn" onclick="processCardPayment()"
                             class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-crimson to-rose-700 hover:from-rose-800 hover:to-brand-dark text-white font-extrabold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer">
-                            <span>🔒 Pay & Authorize Advance (LKR 2,000)</span>
+                            <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                            <span>Pay & Authorize Advance (LKR 2,000)</span>
                           </button>
                         </div>
 
                         <div class="flex items-center justify-center gap-3 pt-1 text-[10px] text-brand-subtle">
-                          <span>🔒 256-Bit SSL</span>
+                          <span class="inline-flex items-center gap-1">
+                            <svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                            <span>256-Bit SSL</span>
+                          </span>
                           <span>•</span>
-                          <span>🛡️ 3D Secure Protected</span>
+                          <span class="inline-flex items-center gap-1">
+                            <svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                              <polyline points="9 12 11 14 15 10"/>
+                            </svg>
+                            <span>3D Secure Protected</span>
+                          </span>
                           <span>•</span>
                           <span>Visa / Mastercard Verified</span>
                         </div>
@@ -1600,7 +1842,13 @@
                       <div class="rounded-xl p-4 bg-white border border-brand-gold/30 shadow-xs space-y-3">
                         <div class="flex items-center justify-between flex-wrap gap-2">
                           <div class="flex items-center gap-2">
-                            <span class="text-base">📲</span>
+                            <span class="text-brand-crimson">
+                              <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="3"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/>
+                                <rect x="9" y="6" width="6" height="6" rx="1"/>
+                              </svg>
+                            </span>
                             <div>
                               <span class="text-xs font-bold text-brand-crimson uppercase tracking-wide">SCAN AND PAY
                                 (ස්කෑන් කර ගෙවන්න)</span>
@@ -1624,8 +1872,12 @@
                                 class="w-full h-full object-contain">
                             </div>
                             <span
-                              class="absolute inset-0 bg-black/40 rounded-xl flex items-center justify-center text-white text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                              🔍 Tap to Zoom
+                              class="absolute inset-0 bg-black/40 rounded-xl flex items-center justify-center text-white text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity gap-1">
+                              <svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="7"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                              </svg>
+                              <span>Tap to Zoom</span>
                             </span>
                           </div>
 
@@ -1638,12 +1890,21 @@
                             </p>
                             <div class="pt-1 flex flex-wrap gap-2 justify-center sm:justify-start">
                               <button type="button" onclick="openPaymentQRModal()"
-                                class="px-3 py-1.5 rounded-lg bg-brand-crimson hover:bg-brand-dark text-white text-[11px] font-bold shadow-xs transition-all flex items-center gap-1">
-                                <span>🔍 View Full Graphic</span>
+                                class="px-3 py-1.5 rounded-lg bg-brand-crimson hover:bg-brand-dark text-white text-[11px] font-bold shadow-xs transition-all flex items-center gap-1.5">
+                                <svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <circle cx="11" cy="11" r="7"/>
+                                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                </svg>
+                                <span>View Full Graphic</span>
                               </button>
                               <a href="images/bank-details-clean.jpg" download="RedKingCake-Bank-Details.jpg"
-                                class="px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso text-[11px] font-semibold transition-all flex items-center gap-1">
-                                <span>⬇️ Save Image</span>
+                                class="px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso text-[11px] font-semibold transition-all flex items-center gap-1.5">
+                                <svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                  <polyline points="7 10 12 15 17 10"/>
+                                  <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                <span>Save Image</span>
                               </a>
                             </div>
                           </div>
@@ -1656,8 +1917,12 @@
                       <!-- Official Clean Digital Bank Graphic -->
                       <div class="rounded-2xl overflow-hidden border-2 border-brand-gold/30 bg-white shadow-xs p-2 text-center cursor-pointer group relative" onclick="openPaymentQRModal()" title="Click to view large graphic">
                         <img src="images/bank-details-clean.jpg" alt="Official Bank Transfer Details - Red King Cake" class="w-full max-h-56 object-contain mx-auto rounded-xl">
-                        <span class="absolute inset-0 bg-black/30 rounded-2xl flex items-center justify-center text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                          🔍 Click to View Full Size Graphic
+                        <span class="absolute inset-0 bg-black/30 rounded-2xl flex items-center justify-center text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity gap-1">
+                          <svg class="w-3.5 h-3.5 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="7"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                          </svg>
+                          <span>Click to View Full Size Graphic</span>
                         </span>
                       </div>
 
@@ -1764,8 +2029,12 @@
                 </svg>
                 <span>Send Order Chit via WhatsApp (+94 77 225 2645)</span>
               </button>
-              <p class="text-center text-xs text-brand-subtle mt-2">
-                🔒 Direct encrypted connection to Redking Cake hotline. No payment required right now.
+              <p class="text-center text-xs text-brand-subtle mt-2 flex items-center justify-center gap-1.5">
+                <svg class="w-3.5 h-3.5 inline-block text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <span>Direct encrypted connection to Redking Cake hotline. No payment required right now.</span>
               </p>
             </div>
 
@@ -1863,8 +2132,12 @@
             <!-- Footer note in receipt -->
             <div
               class="mt-6 pt-4 border-t border-dashed border-gray-200 bg-brand-cream/40 -mx-6 -mb-6 p-5 rounded-b-3xl text-center">
-              <p class="text-xs text-brand-subtle">
-                📍 Pick-up: Samadarapitiya, Maho Road, Nikaweratiya
+              <p class="text-xs text-brand-subtle flex items-center justify-center gap-1">
+                <svg class="w-3.5 h-3.5 inline-block text-brand-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                <span>Pick-up: Samadarapitiya, Maho Road, Nikaweratiya</span>
                 <a href="https://www.google.com/maps/place/Redking+Cake+Nikaweratiya/@7.7569164,80.0883314,14z/data=!4m10!1m2!2m1!1scake+nikaweratiya!3m6!1s0x3afd27dfbfc3f113:0x4394c5dc686d325!8m2!3d7.7569164!4d80.1264402!16s%2Fg%2F11scy85jrx"
                   target="_blank" rel="noopener noreferrer" class="text-brand-crimson underline font-semibold ml-1">
                   (View Map ↗)
@@ -1881,7 +2154,13 @@
           <div
             class="p-5 rounded-2xl bg-white border border-brand-gold/20 shadow-sm text-xs text-brand-subtle space-y-2">
             <p class="font-bold text-brand-espresso flex items-center gap-1.5">
-              <span>💡 Ordering Tips:</span>
+              <svg class="w-4 h-4 inline-block text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6"/>
+                <path d="M10 22h4"/>
+                <path d="M12 2a7 7 0 0 0-4 12.7v1.3h8v-1.3A7 7 0 0 0 12 2z"/>
+                <line x1="12" y1="6" x2="12" y2="10"/>
+              </svg>
+              <span>Ordering Tips:</span>
             </p>
             <p>• For complex custom fondant sculpts or wedding tiers, please order at least 24–48 hours in advance.</p>
             <p>• Need a cake today? Call our direct hotline immediately at <a href="tel:+94772252645"
@@ -1956,14 +2235,23 @@
         <div class="pt-5 space-y-2.5">
           <button id="lightbox-order-form-btn" onclick=""
             class="w-full py-3 rounded-xl bg-brand-crimson hover:bg-brand-dark text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer">
-            <span>🎂 Order This Cake in Form</span>
+            <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 13h18v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7z"/>
+              <path d="M5 9h14v4H5z"/>
+              <line x1="12" y1="9" x2="12" y2="6"/>
+              <circle cx="12" cy="4.5" r="1.5" fill="currentColor"/>
+            </svg>
+            <span>Order This Cake in Form</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </button>
           <a id="lightbox-wa-btn" href="#" target="_blank"
             class="w-full py-2.5 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 text-emerald-800 border border-emerald-300 font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2">
-            <span>💬 Inquire on WhatsApp (+94 77 225 2645)</span>
+            <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            <span>Inquire on WhatsApp (+94 77 225 2645)</span>
           </a>
         </div>
       </div>
@@ -1998,8 +2286,12 @@
 
       <!-- Reminder for photo attachment -->
       <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 space-y-1">
-        <p class="font-bold flex items-center gap-1">
-          <span>📸 Important Reminder:</span>
+        <p class="font-bold flex items-center gap-1.5">
+          <svg class="w-4 h-4 inline-block text-brand-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+          <span>Important Reminder:</span>
         </p>
         <p>If you selected a custom reference photo or paid an advance, please attach your picture / bank deposit
           receipt in the WhatsApp chat when it opens.</p>
@@ -2013,7 +2305,7 @@
             <path
               d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
           </svg>
-          <span>👉 Click to Open WhatsApp Chat (+94 77 225 2645)</span>
+          <span>Click to Open WhatsApp Chat (+94 77 225 2645)</span>
         </a>
 
         <div>
@@ -2036,7 +2328,16 @@
       onclick="event.stopPropagation()">
       <div class="flex items-center justify-between pb-2 border-b border-gray-100">
         <h4 class="font-serif-display font-bold text-base text-brand-espresso flex items-center gap-2">
-          <span>🏛️ Official Bakery Bank Transfer Details</span>
+          <svg class="w-4 h-4 inline-block text-brand-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 22 7 12 2"/>
+            <line x1="4" y1="7" x2="4" y2="17"/>
+            <line x1="9" y1="7" x2="9" y2="17"/>
+            <line x1="15" y1="7" x2="15" y2="17"/>
+            <line x1="20" y1="7" x2="20" y2="17"/>
+            <line x1="2" y1="17" x2="22" y2="17"/>
+            <line x1="1" y1="21" x2="23" y2="21"/>
+          </svg>
+          <span>Official Bakery Bank Transfer Details</span>
         </h4>
         <button onclick="closePaymentQRModal()"
           class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-brand-subtle flex items-center justify-center text-sm font-bold">✕</button>
@@ -2055,7 +2356,12 @@
       <div class="pt-2 flex gap-3 justify-center">
         <a href="images/bank-details-clean.jpg" download="RedKingCake-Bank-Details.jpg"
           class="px-5 py-2.5 rounded-xl bg-brand-crimson hover:bg-brand-dark text-white font-bold text-xs transition-all shadow-md flex items-center gap-1.5">
-          <span>⬇️ Save Bank Details</span>
+          <svg class="w-3.5 h-3.5 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>Save Bank Details</span>
         </a>
         <button onclick="closePaymentQRModal()"
           class="px-5 py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-brand-espresso font-semibold text-xs transition-all">
@@ -2072,7 +2378,10 @@
       class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl border-2 border-brand-gold/40 space-y-4 animate-float-gentle">
       <div class="flex items-center justify-between pb-2 border-b border-gray-100">
         <h4 class="font-serif-display font-bold text-base text-brand-espresso flex items-center gap-1.5">
-          <span>✏️ Edit Cake Price (Admin)</span>
+          <svg class="w-4 h-4 inline-block text-brand-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+          </svg>
+          <span>Edit Cake Price (Admin)</span>
         </h4>
         <button onclick="closeQuickEditPrice()" type="button"
           class="p-1 rounded-lg text-gray-400 hover:text-gray-600 transition-colors cursor-pointer">
@@ -2107,7 +2416,7 @@
             class="block text-xs font-bold text-brand-espresso uppercase tracking-wider mb-1">
             Card Badge / Tag
           </label>
-          <input type="text" id="quick-edit-badge-input" placeholder="e.g. 🌟 Premium Quality or Daily Special"
+          <input type="text" id="quick-edit-badge-input" placeholder="e.g. Premium Quality or Daily Special"
             class="w-full px-4 py-2 rounded-xl border border-gray-300 text-xs text-brand-espresso focus:border-brand-crimson focus:outline-none bg-brand-ivory/50">
         </div>
       </div>
@@ -2136,15 +2445,23 @@
         <div class="flex items-center gap-3">
           <div
             class="w-10 h-10 rounded-2xl bg-brand-crimson/10 text-brand-crimson flex items-center justify-center text-xl shadow-xs">
-            👑
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 19h20M3 15l4-8 5 5 5-5 4 8H3z"/>
+              <circle cx="12" cy="7" r="1" fill="currentColor"/>
+            </svg>
           </div>
           <div>
             <div class="flex items-center gap-2">
               <h3 class="font-serif-display text-lg sm:text-xl font-bold text-brand-espresso">Bakery Administration
                 Portal</h3>
               <span id="admin-badge-lock"
-                class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">🔒
-                Staff Protected</span>
+                class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300 flex items-center gap-1">
+                <svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <span>Staff Protected</span>
+              </span>
             </div>
             <span class="text-[11px] text-brand-subtle">Red King Cake Nikaweratiya - Private Management</span>
           </div>
@@ -2152,7 +2469,11 @@
         <div class="flex items-center gap-2">
           <button id="admin-logout-btn" onclick="adminLogout()" type="button"
             class="hidden px-3 py-1.5 rounded-xl bg-gray-100 hover:bg-rose-50 hover:text-rose-700 text-brand-espresso font-bold text-xs transition-colors flex items-center gap-1">
-            <span>🔒 Log Out</span>
+            <svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Log Out</span>
           </button>
           <button onclick="closeAdminModal()" type="button"
             class="p-1.5 rounded-xl text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer">
@@ -2166,7 +2487,11 @@
       <!-- 1. PASSWORD VERIFICATION SCREEN (For Customers & Unauthenticated Visitors) -->
       <div id="admin-pin-screen" class="space-y-5 py-4 flex-1 overflow-y-auto">
         <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200/80 text-center space-y-1">
-          <span class="text-2xl">🔐</span>
+          <svg class="w-7 h-7 mx-auto text-amber-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+          </svg>
           <h4 class="font-bold text-sm text-amber-950">Private Staff & Owner Login Only</h4>
           <p class="text-xs text-amber-800 leading-relaxed max-w-md mx-auto">
             This administration portal is strictly restricted for Red King Cake staff to upload daily order photos,
@@ -2181,8 +2506,7 @@
           <input type="password" id="admin-pin-input" maxlength="8" placeholder="••••"
             onkeydown="if(event.key==='Enter') verifyAdminPin()"
             class="w-full px-4 py-3 rounded-2xl border-2 border-brand-gold/40 text-center font-mono text-2xl tracking-[0.3em] focus:border-brand-crimson focus:outline-none bg-brand-ivory/60 shadow-inner">
-          <p id="admin-pin-error" class="text-xs text-rose-600 font-bold hidden">⛔ Incorrect Password. Access denied for
-            customers.</p>
+          <p id="admin-pin-error" class="text-xs text-rose-600 font-bold hidden">Incorrect Password. Access denied for customers.</p>
 
           <button type="button" onclick="verifyAdminPin()"
             class="w-full py-3.5 rounded-xl bg-brand-crimson hover:bg-brand-dark text-white font-extrabold text-sm shadow-md transition-all transform hover:-translate-y-0.5">
@@ -2199,23 +2523,40 @@
           class="flex items-center gap-1.5 p-1 bg-brand-cream/80 rounded-2xl border border-brand-gold/25 overflow-x-auto">
           <button type="button" onclick="switchAdminTab('add-photo')" id="tab-btn-add-photo"
             class="admin-tab-btn flex-1 py-2 px-3 rounded-xl font-bold text-xs transition-all bg-white text-brand-crimson shadow-xs flex items-center justify-center gap-1.5 whitespace-nowrap">
-            <span>📸 Add Daily Photos</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+            <span>Add Daily Photos</span>
           </button>
           <button type="button" onclick="switchAdminTab('manage-photos')" id="tab-btn-manage-photos"
             class="admin-tab-btn flex-1 py-2 px-3 rounded-xl font-bold text-xs transition-all text-brand-espresso hover:bg-white/60 flex items-center justify-center gap-1.5 whitespace-nowrap">
-            <span>🏷️ Edit Prices & Gallery</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+              <line x1="7" y1="7" x2="7.01" y2="7"/>
+            </svg>
+            <span>Edit Prices & Gallery</span>
             <span id="admin-custom-count-badge"
               class="px-1.5 py-0.2 rounded-full bg-brand-crimson/10 text-brand-crimson text-[10px]">0</span>
           </button>
           <button type="button" onclick="switchAdminTab('orders-log')" id="tab-btn-orders-log"
             class="admin-tab-btn flex-1 py-2 px-3 rounded-xl font-bold text-xs transition-all text-brand-espresso hover:bg-white/60 flex items-center justify-center gap-1.5 whitespace-nowrap">
-            <span>📋 Orders Log</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+            </svg>
+            <span>Orders Log</span>
             <span id="admin-orders-count-badge"
               class="px-1.5 py-0.2 rounded-full bg-emerald-100 text-emerald-800 text-[10px]">0</span>
           </button>
           <button type="button" onclick="switchAdminTab('store-status')" id="tab-btn-store-status"
             class="admin-tab-btn flex-1 py-2 px-3 rounded-xl font-bold text-xs transition-all text-brand-espresso hover:bg-white/60 flex items-center justify-center gap-1.5 whitespace-nowrap">
-            <span>🏪 Store Status</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l2-5h14l2 5"/>
+              <path d="M21 9a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0"/>
+              <path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/>
+            </svg>
+            <span>Store Status</span>
           </button>
         </div>
 
@@ -2248,7 +2589,10 @@
                 <div id="admin-drop-prompt" class="space-y-1">
                   <div
                     class="w-10 h-10 rounded-full bg-brand-cream text-brand-crimson flex items-center justify-center mx-auto text-xl">
-                    📸
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                      <circle cx="12" cy="13" r="4"/>
+                    </svg>
                   </div>
                   <p class="text-xs font-bold text-brand-espresso">Click to upload photo from your Phone or PC</p>
                   <p class="text-[10px] text-brand-subtle">Supports JPG, PNG, WEBP. Automatically optimized for fast
@@ -2281,11 +2625,11 @@
                 </label>
                 <select id="admin-cake-category" required onchange="handleAdminCategoryChange()"
                   class="w-full px-3 py-2.5 rounded-xl border border-gray-300 text-xs text-brand-espresso focus:border-brand-crimson bg-brand-ivory/50">
-                  <option value="premium">🌟 Premium Quality (Tall Barrel / Drip - Rs. 5,500+)</option>
-                  <option value="design" selected>🎨 3D Design Cake (Sculpted & Character - Rs. 4,500+)</option>
-                  <option value="wedding">💍 Wedding & Bride-to-Be (Royal Tiers - Rs. 5,500+)</option>
-                  <option value="birthday">🎂 Birthday Cake (Sponges & Ribbons)</option>
-                  <option value="combos">🎁 Combos & Gift Packs (Mugs, Frames & Bouquets)</option>
+                  <option value="premium">Premium Quality (Tall Barrel / Drip - Rs. 5,500+)</option>
+                  <option value="design" selected>3D Design Cake (Sculpted & Character - Rs. 4,500+)</option>
+                  <option value="wedding">Wedding & Bride-to-Be (Royal Tiers - Rs. 5,500+)</option>
+                  <option value="birthday">Birthday Cake (Sponges & Ribbons)</option>
+                  <option value="combos">Combos & Gift Packs (Mugs, Frames & Bouquets)</option>
                 </select>
               </div>
 
@@ -2307,7 +2651,7 @@
                   class="block text-xs font-bold text-brand-espresso uppercase tracking-wider mb-1">
                   Card Badge / Tag
                 </label>
-                <input type="text" id="admin-cake-badge" placeholder="e.g. New Daily Bake or 🌟 Premium Quality"
+                <input type="text" id="admin-cake-badge" placeholder="e.g. New Daily Bake or Premium Quality"
                   value="New Daily Bake"
                   class="w-full px-3 py-2.5 rounded-xl border border-gray-300 text-xs text-brand-espresso focus:border-brand-crimson bg-brand-ivory/50">
               </div>
@@ -2326,7 +2670,13 @@
             <!-- Submit Button -->
             <button type="submit" id="admin-submit-photo-btn"
               class="w-full py-3.5 rounded-xl bg-brand-crimson hover:bg-brand-dark text-white font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2">
-              <span>🚀 Publish Photo to Live Cake Gallery</span>
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                <path d="M9 12H4s.55-3.03 2-4.5c1.62-1.63 5-2.5 5-2.5"/>
+                <path d="M15 15v5s3.03-.55 4.5-2c1.63-1.62 2.5-5 2.5-5"/>
+              </svg>
+              <span>Publish Photo to Live Cake Gallery</span>
             </button>
           </form>
         </div>
@@ -2356,23 +2706,35 @@
               class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-brand-crimson text-white font-bold text-[11px] whitespace-nowrap">All
               Cakes</button>
             <button type="button" onclick="filterAdminGalleryCategory('premium', this)"
-              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap">🌟
-              202601-202619 Premium</button>
+              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap inline-flex items-center gap-1">
+              <svg class="w-3 h-3 text-amber-500 fill-amber-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>202601-202619 Premium</span>
+            </button>
             <button type="button" onclick="filterAdminGalleryCategory('wedding', this)"
-              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap">💍
-              202620-202629 Wedding</button>
+              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap inline-flex items-center gap-1">
+              <svg class="w-3 h-3 text-rose-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg>
+              <span>202620-202629 Wedding</span>
+            </button>
             <button type="button" onclick="filterAdminGalleryCategory('design', this)"
-              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap">🎨
-              202640-202659 Design</button>
+              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap inline-flex items-center gap-1">
+              <svg class="w-3 h-3 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.5-.68 1.5-1.5 0-.39-.15-.74-.39-1.01-.24-.26-.39-.61-.39-1.01 0-.83.67-1.5 1.5-1.5H16c3.31 0 6-2.69 6-6 0-4.96-4.49-9-10-9z"/></svg>
+              <span>202640-202659 Design</span>
+            </button>
             <button type="button" onclick="filterAdminGalleryCategory('birthday', this)"
-              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap">🎂
-              202660-202679 Birthday</button>
+              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap inline-flex items-center gap-1">
+              <svg class="w-3 h-3 text-brand-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13h18v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7z"/><path d="M5 9h14v4H5z"/><line x1="12" y1="9" x2="12" y2="6"/></svg>
+              <span>202660-202679 Birthday</span>
+            </button>
             <button type="button" onclick="filterAdminGalleryCategory('combo', this)"
-              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap">🎁
-              202680-202699 Combos</button>
+              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap inline-flex items-center gap-1">
+              <svg class="w-3 h-3 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/></svg>
+              <span>202680-202699 Combos</span>
+            </button>
             <button type="button" onclick="filterAdminGalleryCategory('custom', this)"
-              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap">📸
-              Custom Uploads</button>
+              class="admin-gallery-cat-btn px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-brand-espresso font-bold text-[11px] whitespace-nowrap inline-flex items-center gap-1">
+              <svg class="w-3 h-3 text-brand-subtle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Custom Uploads</span>
+            </button>
           </div>
 
           <!-- Cake List with Direct Inline Price Editors -->
@@ -2432,14 +2794,20 @@
               <span class="text-[10px] text-brand-subtle block font-semibold">Quick Reason Presets:</span>
               <div class="flex flex-wrap gap-1.5">
                 <button type="button" onclick="setPresetNotice('poya')"
-                  class="px-2.5 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 text-[10px] font-semibold">🌕
-                  Poya Holiday</button>
+                  class="px-2.5 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 text-[10px] font-semibold flex items-center gap-1">
+                  <svg class="w-3 h-3 text-amber-500 fill-amber-300" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+                  <span>Poya Holiday</span>
+                </button>
                 <button type="button" onclick="setPresetNotice('booked')"
-                  class="px-2.5 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 text-[10px] font-semibold">🎂
-                  Fully Booked</button>
+                  class="px-2.5 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 text-[10px] font-semibold flex items-center gap-1">
+                  <svg class="w-3 h-3 text-brand-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13h18v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7z"/><path d="M5 9h14v4H5z"/><line x1="12" y1="9" x2="12" y2="6"/></svg>
+                  <span>Fully Booked</span>
+                </button>
                 <button type="button" onclick="setPresetNotice('maintenance')"
-                  class="px-2.5 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 text-[10px] font-semibold">🔧
-                  Kitchen Maintenance</button>
+                  class="px-2.5 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 text-[10px] font-semibold flex items-center gap-1">
+                  <svg class="w-3 h-3 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                  <span>Kitchen Maintenance</span>
+                </button>
               </div>
             </div>
           </div>
@@ -2489,7 +2857,11 @@
               <button type="button" onclick="openAdminModal()"
                 class="text-[11px] text-brand-gold hover:text-white underline cursor-pointer flex items-center gap-1"
                 title="Admin Store Status Controls">
-                <span>Admin ⚙️</span>
+                <svg class="w-3.5 h-3.5 inline-block text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+                <span>Admin</span>
               </button>
             </div>
             <p id="footer-status-notice" class="text-[11px] text-white/60">
@@ -2504,18 +2876,32 @@
 
           <ul class="space-y-3 text-xs text-white/80">
             <li class="flex items-start gap-2.5">
-              <span class="text-brand-gold text-base">📍</span>
+              <span class="text-brand-gold text-base mt-0.5">
+                <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+              </span>
               <div>
                 <span class="block">Samadarapitiya, Maho Road, Nikaweratiya 60470, Sri Lanka</span>
                 <a href="https://www.google.com/maps/place/Redking+Cake+Nikaweratiya/@7.7569164,80.0883314,14z/data=!4m10!1m2!2m1!1scake+nikaweratiya!3m6!1s0x3afd27dfbfc3f113:0x4394c5dc686d325!8m2!3d7.7569164!4d80.1264402!16s%2Fg%2F11scy85jrx"
                   target="_blank" rel="noopener noreferrer"
                   class="text-[11px] text-brand-gold hover:underline inline-flex items-center gap-1 mt-0.5 font-medium">
-                  <span>🗺️ Open in Google Maps ↗</span>
+                  <svg class="w-3.5 h-3.5 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                    <line x1="8" y1="2" x2="8" y2="18"/>
+                    <line x1="16" y1="6" x2="16" y2="22"/>
+                  </svg>
+                  <span>Open in Google Maps ↗</span>
                 </a>
               </div>
             </li>
             <li class="flex items-center gap-2.5">
-              <span class="text-brand-whatsapp text-base">💬</span>
+              <span class="text-brand-whatsapp text-base">
+                <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+              </span>
               <div>
                 <span class="text-[10px] text-white/50 block">Primary WhatsApp / Orders:</span>
                 <a href="https://wa.me/94772252645" target="_blank"
@@ -2523,7 +2909,11 @@
               </div>
             </li>
             <li class="flex items-center gap-2.5">
-              <span class="text-amber-400 text-base">📞</span>
+              <span class="text-amber-400 text-base">
+                <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </span>
               <div>
                 <span class="text-[10px] text-white/50 block">Secondary Hotline:</span>
                 <a href="tel:+94772252645" class="font-bold hover:underline">+94 77 225 2645</a>
@@ -2567,7 +2957,13 @@
         <div class="lg:col-span-5 space-y-3">
           <div class="flex items-center justify-between">
             <h4 class="font-serif-display font-bold text-lg text-brand-gold">Bakery & Shop Location</h4>
-            <span class="text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold">📍 Verified Pin</span>
+            <span class="text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+              <span>Verified Pin</span>
+            </span>
           </div>
 
           <!-- Responsive Map Frame with Touch & Viewport Optimization -->
@@ -2583,12 +2979,20 @@
             <a href="https://www.google.com/maps/dir/?api=1&destination=7.7569164,80.1264402"
               target="_blank" rel="noopener noreferrer"
               class="py-2.5 px-3 rounded-xl bg-brand-crimson hover:bg-red-800 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95 text-center">
-              <span>🧭 Directions</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+              </svg>
+              <span>Directions</span>
             </a>
             <a href="https://www.google.com/maps/place/Redking+Cake+Nikaweratiya/@7.7569164,80.0883314,14z/data=!4m10!1m2!2m1!1scake+nikaweratiya!3m6!1s0x3afd27dfbfc3f113:0x4394c5dc686d325!8m2!3d7.7569164!4d80.1264402!16s%2Fg%2F11scy85jrx"
               target="_blank" rel="noopener noreferrer"
               class="py-2.5 px-3 rounded-xl bg-white/10 hover:bg-white/20 border border-brand-gold/40 text-brand-gold font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95 text-center">
-              <span>📍 Open Maps App ↗</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+              <span>Open Maps App ↗</span>
             </a>
           </div>
 
@@ -2607,7 +3011,11 @@
           <span class="text-white/20">•</span>
           <button onclick="openAdminModal()" type="button"
             class="text-xs text-white/50 hover:text-brand-gold transition-colors flex items-center gap-1 cursor-pointer">
-            <span>🔒 Staff & Admin Portal (5023)</span>
+            <svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Staff & Admin Portal (5023)</span>
           </button>
         </div>
         <p class="flex items-center gap-1">
@@ -3189,12 +3597,12 @@
 
     function getCategoryLabel(category) {
       switch (category) {
-        case 'premium': return '🌟 Premium Quality (Tall)';
-        case 'design': return '🎨 3D Design Cake';
-        case 'wedding': return '💍 Wedding & Bride-to-Be';
-        case 'birthday': return '🎂 Birthday Celebration';
-        case 'combo': return '🎁 Deluxe Hamper & Combo';
-        default: return '✨ Bakery Creation';
+        case 'premium': return 'Premium Quality (Tall)';
+        case 'design': return '3D Design Cake';
+        case 'wedding': return 'Wedding & Bride-to-Be';
+        case 'birthday': return 'Birthday Celebration';
+        case 'combo': return 'Deluxe Hamper & Combo';
+        default: return 'Bakery Creation';
       }
     }
 
@@ -3210,8 +3618,13 @@
       if (items.length === 0) {
         grid.innerHTML = `
           <div class="col-span-full py-16 px-4 text-center glass-card rounded-3xl border border-brand-gold/20 max-w-xl mx-auto my-6 space-y-4">
-            <div class="w-16 h-16 rounded-full bg-brand-crimson/10 text-brand-crimson flex items-center justify-center text-3xl mx-auto">
-              🎂
+            <div class="w-16 h-16 rounded-full bg-brand-crimson/10 text-brand-crimson flex items-center justify-center mx-auto">
+              <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 13h18v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7z"/>
+                <path d="M5 9h14v4H5z"/>
+                <line x1="12" y1="9" x2="12" y2="6"/>
+                <circle cx="12" cy="4.5" r="1.5" fill="currentColor"/>
+              </svg>
             </div>
             <h3 class="font-serif-display font-bold text-2xl text-brand-espresso">No cakes found</h3>
             <p class="text-xs sm:text-sm text-brand-subtle max-w-md mx-auto">
@@ -3243,7 +3656,11 @@
               <!-- Gradient Overlay on hover with Quick View pill -->
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span class="px-4 py-2 rounded-full bg-white/95 backdrop-blur-md text-brand-espresso text-xs font-bold shadow-lg flex items-center gap-1.5 transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 border border-brand-gold/30">
-                  <span>🔍 Quick View</span>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="7"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                  <span>Quick View</span>
                 </span>
               </div>
 
@@ -3258,7 +3675,10 @@
                         title="Click to edit price (Admin)"
                         type="button"
                         class="absolute top-3 right-3 z-30 px-2.5 py-1 rounded-full bg-brand-espresso/90 hover:bg-brand-crimson text-white text-[10px] font-extrabold shadow-lg border border-brand-gold/60 flex items-center gap-1 transition-all cursor-pointer">
-                  <span>✏️ Edit Price</span>
+                  <svg class="w-3 h-3 text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                  </svg>
+                  <span>Edit Price</span>
                 </button>
               ` : ''}
 
@@ -3285,8 +3705,12 @@
           <div class="px-3.5 pb-3.5 sm:px-4 sm:pb-4 pt-0 grid grid-cols-2 gap-2">
             <button onclick="openCakeLightbox('${item.id}')" 
                     type="button"
-                    class="py-2.5 rounded-xl bg-brand-cream/90 hover:bg-brand-cream text-brand-espresso font-bold text-xs transition-all border border-brand-gold/25 flex items-center justify-center gap-1 cursor-pointer">
-              <span>👁️ View</span>
+                    class="py-2.5 rounded-xl bg-brand-cream/90 hover:bg-brand-cream text-brand-espresso font-bold text-xs transition-all border border-brand-gold/25 flex items-center justify-center gap-1.5 cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-brand-subtle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span>View</span>
             </button>
             <button onclick="orderThisCake('${item.id}')" 
                     type="button"
@@ -3574,7 +3998,7 @@
             }
           }
         }
-        showToast(`🎉 "${itemName}" added to your order chit!`);
+        showToast(`"${itemName}" added to your order chit!`);
       } else if (itemType === 'cupcake' || itemType === 'cupcake-set') {
         if (catSelect) catSelect.value = 'Birthday Cake';
         if (sizeSelect) {
@@ -3594,7 +4018,7 @@
         if (notesInput) {
           notesInput.value = `Shop Item: ${itemName} (Fresh daily bakery bake)`;
         }
-        showToast(`🧁 "${itemName}" selected for your order!`);
+        showToast(`"${itemName}" selected for your order!`);
       } else if (itemType === 'bento') {
         if (catSelect) catSelect.value = 'Birthday Cake';
         if (sizeSelect) {
@@ -3619,7 +4043,7 @@
         if (notesInput) {
           notesInput.value = `Shop Item: Bento Cake / Lunchbox Cake`;
         }
-        showToast(`🍱 Bento Cake selected for your order!`);
+        showToast(`Bento Cake selected for your order!`);
       } else {
         // ribbon cake, chocolate cake, butter cake
         if (catSelect) catSelect.value = 'Birthday Cake';
@@ -3634,7 +4058,7 @@
             }
           }
         }
-        showToast(`🎂 "${itemName}" selected for your order!`);
+        showToast(`"${itemName}" selected for your order!`);
       }
 
       if (typeof updateLiveSummary === 'function') {
@@ -3661,7 +4085,11 @@
         toast.className = 'fixed bottom-6 right-6 z-50 max-w-sm px-4 py-3 rounded-2xl bg-brand-espresso text-white text-xs sm:text-sm font-semibold shadow-2xl border border-brand-gold/40 flex items-center gap-3 transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none';
         document.body.appendChild(toast);
       }
-      toast.innerHTML = `<span class="text-base">✨</span> <span>${message}</span>`;
+      toast.innerHTML = `<span class="inline-flex items-center text-amber-400">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0l2.5 8.5L23 11l-8.5 2.5L12 22l-2.5-8.5L1 11l8.5-2.5z"/>
+        </svg>
+      </span> <span>${message}</span>`;
       toast.classList.remove('translate-y-20', 'opacity-0');
       toast.classList.add('translate-y-0', 'opacity-100');
       clearTimeout(toast._timeout);
@@ -3701,7 +4129,7 @@
         document.getElementById('sum-fulfillment').textContent = 'Home Delivery';
         let addrDisplay = deliveryAddress || (taggedLocationLink ? 'GPS Pin Attached' : 'Address needed');
         if (taggedLocationLink && deliveryAddress) {
-          addrDisplay += ' (📍 Pin Attached)';
+          addrDisplay += ' (Pin Attached)';
         }
         document.getElementById('sum-address').textContent = addrDisplay;
       } else {
@@ -3758,7 +4186,7 @@
 
       if (!navigator.geolocation) {
         if (errorMsg) {
-          errorMsg.textContent = '⚠️ Geolocation is not supported by your browser. Please paste a Google Maps link.';
+          errorMsg.textContent = 'Geolocation is not supported by your browser. Please paste a Google Maps link.';
           errorMsg.classList.remove('hidden');
         }
         return;
@@ -3780,22 +4208,22 @@
 
           if (spinner) spinner.classList.add('hidden');
           if (defaultIcon) defaultIcon.classList.remove('hidden');
-          if (label) label.textContent = '📍 GPS Location Attached!';
+          if (label) label.textContent = 'GPS Location Attached!';
           if (btn) btn.disabled = false;
 
-          showFormToast('📍 Current GPS Location successfully tagged!');
+          showFormToast('Current GPS Location successfully tagged!');
         },
         (error) => {
           if (spinner) spinner.classList.add('hidden');
           if (defaultIcon) defaultIcon.classList.remove('hidden');
-          if (label) label.textContent = '📍 Pin My Current GPS Location';
+          if (label) label.textContent = 'Pin My Current GPS Location';
           if (btn) btn.disabled = false;
 
-          let errText = '⚠️ Could not get your GPS location. Please check browser location permissions or paste a Google Maps link.';
+          let errText = 'Could not get your GPS location. Please check browser location permissions or paste a Google Maps link.';
           if (error.code === error.PERMISSION_DENIED) {
-            errText = '⚠️ Location permission was denied. Please allow location access in your browser or paste a Google Maps link.';
+            errText = 'Location permission was denied. Please allow location access in your browser or paste a Google Maps link.';
           } else if (error.code === error.TIMEOUT) {
-            errText = '⚠️ Location request timed out. Please try again or paste a Google Maps link.';
+            errText = 'Location request timed out. Please try again or paste a Google Maps link.';
           }
           if (errorMsg) {
             errorMsg.textContent = errText;
@@ -3830,7 +4258,7 @@
       if (preview) preview.classList.remove('hidden');
       if (testLink) {
         testLink.href = url;
-        testLink.textContent = `🗺️ Test Open: ${displayText || 'Google Maps Pin'} ↗`;
+        testLink.textContent = `Test Open: ${displayText || 'Google Maps Pin'} ↗`;
       }
       if (manualInput && !manualInput.value) {
         manualInput.value = url;
@@ -3847,7 +4275,7 @@
 
       if (preview) preview.classList.add('hidden');
       if (manualInput) manualInput.value = '';
-      if (label) label.textContent = '📍 Pin My Current GPS Location';
+      if (label) label.textContent = 'Pin My Current GPS Location';
       if (errorMsg) errorMsg.classList.add('hidden');
       updateLiveSummary();
     }
@@ -3997,28 +4425,24 @@
           badge.textContent = 'VISA';
           badge.className = 'px-2.5 py-0.5 rounded text-xs font-black tracking-widest bg-blue-600 text-white shadow-xs';
         }
-        if (icon) icon.textContent = '💳';
       } else if (val.startsWith('5') || val.startsWith('2')) {
         detectedCardBrand = 'MASTERCARD';
         if (badge) {
           badge.textContent = 'MASTERCARD';
           badge.className = 'px-2.5 py-0.5 rounded text-xs font-black tracking-widest bg-amber-600 text-white shadow-xs';
         }
-        if (icon) icon.textContent = '💳';
       } else if (val.startsWith('3')) {
         detectedCardBrand = 'AMEX';
         if (badge) {
           badge.textContent = 'AMEX';
           badge.className = 'px-2.5 py-0.5 rounded text-xs font-black tracking-widest bg-sky-600 text-white shadow-xs';
         }
-        if (icon) icon.textContent = '💳';
       } else {
         detectedCardBrand = 'VISA';
         if (badge) {
           badge.textContent = 'CARD';
           badge.className = 'px-2.5 py-0.5 rounded text-xs font-black tracking-widest bg-stone-700 text-white shadow-xs';
         }
-        if (icon) icon.textContent = '💳';
       }
     }
 
@@ -4049,7 +4473,7 @@
       }
       const btn = document.getElementById('pay-card-btn');
       if (btn && !cardPaymentAuthorized) {
-        btn.innerHTML = `<span>🔒 Pay & Authorize Advance (LKR ${amount.toLocaleString()})</span>`;
+        btn.innerHTML = `<svg class="w-4 h-4 inline-block align-middle mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Pay & Authorize Advance (LKR ${amount.toLocaleString()})</span>`;
       }
       if (cardPaymentAuthorized) {
         cardPaymentAuthorized.amount = amount;
@@ -4066,25 +4490,25 @@
       const cvv = document.getElementById('card-cvv-input')?.value.trim();
 
       if (!name) {
-        alert('⚠️ Please enter the Cardholder Name as shown on your card.');
+        alert('Please enter the Cardholder Name as shown on your card.');
         document.getElementById('card-holder-input')?.focus();
         return;
       }
 
       if (!num || num.length < 15) {
-        alert('⚠️ Please enter a valid 16-digit card number.');
+        alert('Please enter a valid 16-digit card number.');
         document.getElementById('card-number-input')?.focus();
         return;
       }
 
       if (!exp || exp.length < 5) {
-        alert('⚠️ Please enter a valid card expiration date (MM / YY).');
+        alert('Please enter a valid card expiration date (MM / YY).');
         document.getElementById('card-expiry-input')?.focus();
         return;
       }
 
       if (!cvv || cvv.length < 3) {
-        alert('⚠️ Please enter the 3-digit CVV / CVC code on the back of your card.');
+        alert('Please enter the 3-digit CVV / CVC code on the back of your card.');
         document.getElementById('card-cvv-input')?.focus();
         return;
       }
@@ -4154,7 +4578,7 @@
       }
       const payBtn = document.getElementById('pay-card-btn');
       if (payBtn) {
-        payBtn.innerHTML = `<span>🔒 Pay & Authorize Advance (LKR ${selectedAdvanceAmount.toLocaleString()})</span>`;
+        payBtn.innerHTML = `<svg class="w-4 h-4 inline-block align-middle mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Pay & Authorize Advance (LKR ${selectedAdvanceAmount.toLocaleString()})</span>`;
       }
       if (typeof updateLiveSummary === 'function') {
         updateLiveSummary();
@@ -4227,28 +4651,28 @@
       const dateInput = document.getElementById('order-date');
 
       if (!nameInput || !nameInput.value.trim()) {
-        alert('⚠️ Please enter your Full Name to place the order chit.');
+        alert('Please enter your Full Name to place the order chit.');
         nameInput?.focus();
         nameInput?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
 
       if (!catInput || !catInput.value) {
-        alert('⚠️ Please select a Cake Category.');
+        alert('Please select a Cake Category.');
         catInput?.focus();
         catInput?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
 
       if (!sizeInput || !sizeInput.value) {
-        alert('⚠️ Please select a Cake Weight or Package.');
+        alert('Please select a Cake Weight or Package.');
         sizeInput?.focus();
         sizeInput?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
 
       if (!dateInput || !dateInput.value) {
-        alert('⚠️ Please select your required Cake Date.');
+        alert('Please select your required Cake Date.');
         dateInput?.focus();
         dateInput?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
@@ -4257,7 +4681,7 @@
       const isDelivery = document.getElementById('ful-delivery')?.checked;
       const deliveryAddress = document.getElementById('delivery-address')?.value.trim();
       if (isDelivery && !deliveryAddress && !taggedLocationLink) {
-        alert('⚠️ Please enter your complete delivery location & address or pin your GPS location.');
+        alert('Please enter your complete delivery location & address or pin your GPS location.');
         document.getElementById('delivery-address')?.focus();
         document.getElementById('delivery-address')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
@@ -4285,7 +4709,7 @@
 
       // Conditional Delivery Validation
       if (isDelivery && !deliveryAddress && !taggedLocationLink) {
-        alert('⚠️ Please enter your complete delivery location & address or pin your GPS location.');
+        alert('Please enter your complete delivery location & address or pin your GPS location.');
         document.getElementById('delivery-address').focus();
         return;
       }
@@ -4605,7 +5029,7 @@
         document.getElementById('admin-logout-btn')?.classList.add('hidden');
         document.getElementById('admin-badge-lock')?.classList.remove('bg-emerald-100', 'text-emerald-800');
         document.getElementById('admin-badge-lock')?.classList.add('bg-amber-100', 'text-amber-800');
-        document.getElementById('admin-badge-lock').textContent = '🔒 Staff Protected';
+        document.getElementById('admin-badge-lock').innerHTML = `<svg class="w-3 h-3 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Staff Protected`;
 
         const pinInput = document.getElementById('admin-pin-input');
         if (pinInput) {
@@ -4646,7 +5070,7 @@
         syncAdminControlsUI();
       } else {
         if (pinError) {
-          pinError.textContent = "⛔ Incorrect Password! Access denied for customers.";
+          pinError.textContent = "Incorrect Password! Access denied for customers.";
           pinError.classList.remove('hidden');
         }
         if (pinInput) {
@@ -4666,8 +5090,8 @@
 
       const badge = document.getElementById('admin-badge-lock');
       if (badge) {
-        badge.className = "text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300";
-        badge.textContent = "🔒 Staff Protected";
+        badge.className = "text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300 flex items-center gap-1";
+        badge.innerHTML = `<svg class="w-3 h-3 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Staff Protected</span>`;
       }
 
       const pinInput = document.getElementById('admin-pin-input');
@@ -4704,19 +5128,19 @@
 
       if (cat === 'premium') {
         if (priceInput) priceInput.value = "LKR 5,500+";
-        if (badgeInput) badgeInput.value = "🌟 Premium Quality";
+        if (badgeInput) badgeInput.value = "Premium Quality";
       } else if (cat === 'design') {
         if (priceInput) priceInput.value = "LKR 4,500+";
-        if (badgeInput) badgeInput.value = "🎨 3D Custom Design";
+        if (badgeInput) badgeInput.value = "3D Custom Design";
       } else if (cat === 'wedding') {
         if (priceInput) priceInput.value = "LKR 5,500+";
-        if (badgeInput) badgeInput.value = "💍 Wedding & Bride";
+        if (badgeInput) badgeInput.value = "Wedding & Bride";
       } else if (cat === 'birthday') {
         if (priceInput) priceInput.value = "LKR 3,500+";
-        if (badgeInput) badgeInput.value = "🎂 Birthday Special";
+        if (badgeInput) badgeInput.value = "Birthday Special";
       } else if (cat === 'combos') {
         if (priceInput) priceInput.value = "LKR 4,999/-";
-        if (badgeInput) badgeInput.value = "🎁 Celebration Hamper";
+        if (badgeInput) badgeInput.value = "Celebration Hamper";
       }
     }
 
@@ -4776,7 +5200,7 @@
       event.preventDefault();
 
       if (!adminSelectedPhotoDataUrl) {
-        alert('⚠️ Please select a cake photo to upload!');
+        alert('Please select a cake photo to upload!');
         return;
       }
 
@@ -4994,7 +5418,14 @@
       if (displayCakes.length === 0) {
         listEl.innerHTML = `
           <div class="p-8 text-center bg-gray-50 rounded-2xl border border-dashed border-gray-200 space-y-2">
-            <span class="text-3xl">🎂</span>
+            <div class="w-10 h-10 rounded-full bg-brand-crimson/10 text-brand-crimson flex items-center justify-center mx-auto">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 13h18v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7z"/>
+                <path d="M5 9h14v4H5z"/>
+                <line x1="12" y1="9" x2="12" y2="6"/>
+                <circle cx="12" cy="4.5" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
             <p class="font-bold text-xs text-brand-espresso">No cakes found in this category</p>
             <p class="text-[11px] text-brand-subtle">Use the category buttons above or upload a new photo.</p>
           </div>`;
@@ -5031,13 +5462,21 @@
 
             <button type="button" onclick="saveAdminListItemPrice('${cake.id}')" 
                     class="px-3.5 py-1.5 rounded-xl bg-brand-crimson hover:bg-brand-dark text-white font-bold text-xs shadow-xs transition-all flex items-center gap-1 cursor-pointer">
-              <span>💾 Save</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                <polyline points="17 21 17 13 7 13 7 21"/>
+                <polyline points="7 3 7 8 15 8"/>
+              </svg>
+              <span>Save</span>
             </button>
 
             ${cake.id.startsWith('custom-') ? `
               <button type="button" onclick="deleteCustomCake('${cake.id}')" title="Delete custom cake"
-                      class="px-2.5 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold transition-colors cursor-pointer">
-                <span>🗑️</span>
+                      class="px-2.5 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold transition-colors cursor-pointer flex items-center justify-center">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="3 6 5 6 21 6"/>
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
               </button>
             ` : ''}
           </div>
@@ -5068,7 +5507,12 @@
       if (orders.length === 0) {
         listEl.innerHTML = `
           <div class="p-8 text-center bg-gray-50 rounded-2xl border border-dashed border-gray-200 space-y-2">
-            <span class="text-3xl">📝</span>
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-brand-gold flex items-center justify-center mx-auto">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              </svg>
+            </div>
             <p class="font-bold text-xs text-brand-espresso">No Orders Recorded Yet</p>
             <p class="text-[11px] text-brand-subtle">Orders placed through the website will automatically appear here with full customer details.</p>
           </div>`;
