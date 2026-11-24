@@ -1152,7 +1152,14 @@
                           🏪</div>
                         <div>
                           <p class="font-bold text-xs sm:text-sm text-brand-espresso">Store Pickup (Free)</p>
-                          <p class="text-[11px] text-brand-subtle">Maho Road, Nikaweratiya</p>
+                          <div class="flex items-center gap-2">
+                            <p class="text-[11px] text-brand-subtle">Maho Road, Nikaweratiya</p>
+                            <a href="https://www.google.com/maps/place/RedKing+Technologies/@6.7415979,79.9029172,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae24561c94ee223:0xb95c9b7f6384bf5a!8m2!3d6.7415979!4d79.9029172!16s%2Fg%2F11p0013s_0"
+                              target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()"
+                              class="text-[10px] text-brand-crimson font-semibold hover:underline">
+                              🗺️ Map ↗
+                            </a>
+                          </div>
                         </div>
                       </label>
                     </div>
@@ -1858,6 +1865,10 @@
               class="mt-6 pt-4 border-t border-dashed border-gray-200 bg-brand-cream/40 -mx-6 -mb-6 p-5 rounded-b-3xl text-center">
               <p class="text-xs text-brand-subtle">
                 📍 Pick-up: Samadarapitiya, Maho Road, Nikaweratiya
+                <a href="https://www.google.com/maps/place/RedKing+Technologies/@6.7415979,79.9029172,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae24561c94ee223:0xb95c9b7f6384bf5a!8m2!3d6.7415979!4d79.9029172!16s%2Fg%2F11p0013s_0"
+                  target="_blank" rel="noopener noreferrer" class="text-brand-crimson underline font-semibold ml-1">
+                  (View Map ↗)
+                </a>
               </p>
               <p class="text-[11px] text-brand-gold font-bold mt-1">
                 Bakery Hotline: +94 77 225 2645
@@ -2494,7 +2505,14 @@
           <ul class="space-y-3 text-xs text-white/80">
             <li class="flex items-start gap-2.5">
               <span class="text-brand-gold text-base">📍</span>
-              <span>Samadarapitiya, Maho Road, Nikaweratiya 60470, Sri Lanka</span>
+              <div>
+                <span class="block">Samadarapitiya, Maho Road, Nikaweratiya 60470, Sri Lanka</span>
+                <a href="https://www.google.com/maps/place/RedKing+Technologies/@6.7415979,79.9029172,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae24561c94ee223:0xb95c9b7f6384bf5a!8m2!3d6.7415979!4d79.9029172!16s%2Fg%2F11p0013s_0"
+                  target="_blank" rel="noopener noreferrer"
+                  class="text-[11px] text-brand-gold hover:underline inline-flex items-center gap-1 mt-0.5 font-medium">
+                  <span>🗺️ Open in Google Maps ↗</span>
+                </a>
+              </div>
             </li>
             <li class="flex items-center gap-2.5">
               <span class="text-brand-whatsapp text-base">💬</span>
@@ -2545,19 +2563,25 @@
           </div>
         </div>
 
-        <!-- Embedded Google Map centered on Nikaweratiya (5 cols) -->
+        <!-- Embedded Google Map centered on RedKing Location (5 cols) -->
         <div class="lg:col-span-5 space-y-3">
-          <h4 class="font-serif-display font-bold text-lg text-brand-gold">Bakery Location in Nikaweratiya</h4>
-          <div class="rounded-2xl overflow-hidden border border-white/10 h-48 bg-neutral-800 shadow-inner">
-            <iframe title="Redking Cake Nikaweratiya Location"
-              src="https://maps.google.com/maps?q=Nikaweratiya%2060470,%20Maho%20Road&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          <div class="flex items-center justify-between">
+            <h4 class="font-serif-display font-bold text-lg text-brand-gold">Bakery & Shop Location</h4>
+            <span class="text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold">📍 Verified Pin</span>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10 h-52 bg-neutral-800 shadow-inner">
+            <iframe title="RedKing Cake & Technologies Location"
+              src="https://maps.google.com/maps?q=6.7415979,79.9029172(RedKing%20Technologies)&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
           </div>
-          <p class="text-[11px] text-white/50 flex items-center justify-between">
+          <p class="text-[11px] text-white/70 flex items-center justify-between">
             <span>Direct pickup on Maho Road</span>
-            <a href="https://maps.google.com/maps?q=Nikaweratiya%2060470" target="_blank"
-              class="text-brand-gold hover:underline">Open in Google Maps ↗</a>
+            <a href="https://www.google.com/maps/place/RedKing+Technologies/@6.7415979,79.9029172,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae24561c94ee223:0xb95c9b7f6384bf5a!8m2!3d6.7415979!4d79.9029172!16s%2Fg%2F11p0013s_0"
+              target="_blank" rel="noopener noreferrer"
+              class="text-brand-gold hover:underline font-bold inline-flex items-center gap-1">
+              <span>Open in Google Maps App ↗</span>
+            </a>
           </p>
         </div>
 
@@ -4304,7 +4328,7 @@
 📸 *Reference Photo:* ${photoText}
 💳 *Payment Mode:* ${payText}${closedNote}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📍 *Pick-up:* Samadarapitiya, Maho Road, Nikaweratiya
+📍 *Pick-up:* Samadarapitiya, Maho Road, Nikaweratiya (Map: https://maps.google.com/?q=6.7415979,79.9029172)
 ☎️ *Bakery Hotline:* +94 77 225 2645
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ✅ *Order placed via Redking Cake Online Portal*`;
