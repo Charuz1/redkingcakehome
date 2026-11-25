@@ -1758,22 +1758,34 @@
                           </label>
                           <div class="grid grid-cols-3 gap-2">
                             <button type="button" onclick="selectCardAdvance(1500, this)"
-                              class="advance-chip py-1.5 px-2 rounded-lg border border-gray-200 hover:border-brand-crimson text-xs font-bold text-brand-espresso bg-white transition-all">
+                              class="advance-chip py-1.5 px-2 rounded-lg border border-gray-200 hover:border-brand-crimson text-xs font-bold text-brand-espresso bg-white transition-all cursor-pointer">
                               LKR 1,500
                             </button>
                             <button type="button" onclick="selectCardAdvance(2000, this)"
-                              class="advance-chip py-1.5 px-2 rounded-lg border-2 border-brand-crimson bg-brand-crimson/5 text-xs font-bold text-brand-crimson transition-all flex items-center justify-center gap-1">
+                              class="advance-chip py-1.5 px-2 rounded-lg border-2 border-brand-crimson bg-brand-crimson/5 text-xs font-bold text-brand-crimson transition-all flex items-center justify-center gap-1 cursor-pointer">
                               <span>LKR 2,000</span>
                               <svg class="w-3 h-3 text-amber-500 fill-amber-400" viewBox="0 0 24 24">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                               </svg>
                             </button>
                             <button type="button" onclick="selectCardAdvance(3000, this)"
-                              class="advance-chip py-1.5 px-2 rounded-lg border border-gray-200 hover:border-brand-crimson text-xs font-bold text-brand-espresso bg-white transition-all">
+                              class="advance-chip py-1.5 px-2 rounded-lg border border-gray-200 hover:border-brand-crimson text-xs font-bold text-brand-espresso bg-white transition-all cursor-pointer">
                               LKR 3,000
                             </button>
                           </div>
-                          <span class="text-[10px] text-brand-subtle block mt-1">Remaining balance is payable at store
+
+                          <!-- Customer Custom Advance Input -->
+                          <div class="mt-2.5">
+                            <div class="relative">
+                              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-black text-brand-crimson pointer-events-none">LKR</span>
+                              <input type="number" id="custom-advance-input" min="500" max="100000" step="100"
+                                placeholder="Or type your custom advance amount (e.g. 2500, 5000)"
+                                oninput="handleCustomAdvanceInput(this)"
+                                class="w-full pl-12 pr-4 py-2 rounded-xl border border-gray-200 text-xs font-bold text-brand-espresso placeholder:text-gray-400 placeholder:font-normal focus:border-brand-crimson focus:ring-1 focus:ring-brand-crimson/20 focus:outline-none bg-brand-ivory/30 transition-all">
+                            </div>
+                          </div>
+
+                          <span class="text-[10px] text-brand-subtle block mt-1.5">Remaining balance is payable at store
                             pickup or upon delivery.</span>
                         </div>
 
@@ -4487,6 +4499,15 @@
 
     function selectCardAdvance(amount, chipElement) {
       selectedAdvanceAmount = amount;
+
+      // Reset custom input styling and value
+      const customInput = document.getElementById('custom-advance-input');
+      if (customInput) {
+        customInput.value = '';
+        customInput.classList.remove('border-brand-crimson', 'bg-brand-crimson/5', 'ring-1', 'ring-brand-crimson/20');
+        customInput.classList.add('border-gray-200', 'bg-brand-ivory/30');
+      }
+
       document.querySelectorAll('.advance-chip').forEach(c => {
         c.className = 'advance-chip py-1.5 px-2 rounded-lg border border-gray-200 hover:border-brand-crimson text-xs font-bold text-brand-espresso bg-white transition-all cursor-pointer';
       });
@@ -4509,7 +4530,58 @@
       }
     }
 
+    function handleCustomAdvanceInput(inputEl) {
+      const rawVal = inputEl.value.replace(/[^0-9]/g, '');
+      const val = parseInt(rawVal, 10);
+
+      // Unselect preset chip buttons
+      document.querySelectorAll('.advance-chip').forEach(c => {
+        c.className = 'advance-chip py-1.5 px-2 rounded-lg border border-gray-200 hover:border-brand-crimson text-xs font-bold text-brand-espresso bg-white transition-all cursor-pointer';
+      });
+
+      if (!isNaN(val) && val > 0) {
+        selectedAdvanceAmount = val;
+        inputEl.classList.add('border-brand-crimson', 'bg-brand-crimson/5', 'ring-1', 'ring-brand-crimson/20');
+        inputEl.classList.remove('border-gray-200', 'bg-brand-ivory/30');
+
+        const display = document.getElementById('selected-advance-display');
+        if (display) {
+          display.textContent = `LKR ${val.toLocaleString()}`;
+        }
+        const btn = document.getElementById('pay-card-btn');
+        if (btn && !cardPaymentAuthorized) {
+          btn.innerHTML = `<svg class="w-4 h-4 inline-block align-middle mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Pay & Authorize Advance (LKR ${val.toLocaleString()})</span>`;
+        }
+        if (cardPaymentAuthorized) {
+          cardPaymentAuthorized.amount = val;
+        }
+      } else {
+        selectedAdvanceAmount = 0;
+        inputEl.classList.remove('border-brand-crimson', 'bg-brand-crimson/5', 'ring-1', 'ring-brand-crimson/20');
+        inputEl.classList.add('border-gray-200', 'bg-brand-ivory/30');
+
+        const display = document.getElementById('selected-advance-display');
+        if (display) {
+          display.textContent = 'Enter amount';
+        }
+        const btn = document.getElementById('pay-card-btn');
+        if (btn && !cardPaymentAuthorized) {
+          btn.innerHTML = `<svg class="w-4 h-4 inline-block align-middle mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Pay & Authorize Advance</span>`;
+        }
+      }
+
+      if (typeof updateLiveSummary === 'function') {
+        updateLiveSummary();
+      }
+    }
+
     function processCardPayment() {
+      if (!selectedAdvanceAmount || selectedAdvanceAmount <= 0) {
+        alert('Please enter or select a valid advance amount to pay (e.g. LKR 1,500 or more).');
+        document.getElementById('custom-advance-input')?.focus();
+        return;
+      }
+
       const name = document.getElementById('card-holder-input')?.value.trim();
       const num = document.getElementById('card-number-input')?.value.replace(/\s+/g, '');
       const exp = document.getElementById('card-expiry-input')?.value.trim();
