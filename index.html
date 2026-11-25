@@ -2426,6 +2426,15 @@
           class="flex-1 py-3 rounded-xl bg-brand-crimson hover:bg-brand-dark text-white font-bold text-xs shadow-md transition-all cursor-pointer">
           Save Price
         </button>
+        <button type="button" onclick="deleteFromQuickEdit()"
+          class="py-3 px-3.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs border border-rose-200 transition-all cursor-pointer flex items-center justify-center gap-1"
+          title="Delete this design from live gallery">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 6 5 6 21 6"/>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+          </svg>
+          <span>Delete</span>
+        </button>
         <button type="button" onclick="closeQuickEditPrice()"
           class="py-3 px-4 rounded-xl bg-gray-100 hover:bg-gray-200 text-brand-espresso font-semibold text-xs cursor-pointer">
           Cancel
@@ -2693,7 +2702,12 @@
               <span id="admin-gallery-count-label"
                 class="text-xs font-bold text-brand-crimson bg-brand-crimson/10 px-2.5 py-1 rounded-full">37
                 Cakes</span>
-              <button onclick="resetAllPriceOverrides()" type="button" title="Reset all prices back to default"
+              <button id="admin-restore-deleted-btn" onclick="restoreDeletedCakes()" type="button"
+                class="hidden text-[11px] text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-2.5 py-1 rounded-lg font-bold cursor-pointer transition-colors"
+                title="Restore deleted cakes back to the gallery">
+                Restore Deleted
+              </button>
+              <button onclick="resetAllPriceOverrides()" type="button" title="Reset all prices and restore defaults"
                 class="text-[11px] text-brand-subtle hover:text-rose-600 underline cursor-pointer">
                 Reset Defaults
               </button>
@@ -3473,6 +3487,15 @@
       }
     ];
 
+    function getDeletedCakeIds() {
+      try {
+        const stored = localStorage.getItem('redking_deleted_cakes');
+        return stored ? JSON.parse(stored) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
     function getCatalogOverrides() {
       try {
         const stored = localStorage.getItem('redking_catalog_overrides');
@@ -3485,12 +3508,15 @@
     function getMergedCakeCatalog() {
       const customCakes = getCustomCakes();
       const overrides = getCatalogOverrides();
-      return [...customCakes, ...baseCakeCatalog].map(cake => {
-        if (overrides[cake.id]) {
-          return { ...cake, ...overrides[cake.id] };
-        }
-        return cake;
-      });
+      const deletedIds = new Set(getDeletedCakeIds());
+      return [...customCakes, ...baseCakeCatalog]
+        .filter(cake => !deletedIds.has(cake.id))
+        .map(cake => {
+          if (overrides[cake.id]) {
+            return { ...cake, ...overrides[cake.id] };
+          }
+          return cake;
+        });
     }
 
     let cakeCatalog = getMergedCakeCatalog();
@@ -5233,7 +5259,7 @@
         const customCakes = getCustomCakes();
         customCakes.unshift(newCake);
         localStorage.setItem('redking_custom_cakes', JSON.stringify(customCakes));
-        cakeCatalog = [...customCakes, ...baseCakeCatalog];
+        cakeCatalog = getMergedCakeCatalog();
 
         filterCakes();
         renderAdminUploadedList();
@@ -5314,6 +5340,13 @@
       document.getElementById('admin-quick-edit-modal')?.classList.add('hidden');
     }
 
+    function deleteFromQuickEdit() {
+      const cakeId = document.getElementById('quick-edit-cake-id')?.value;
+      if (!cakeId) return;
+      closeQuickEditPrice();
+      deleteCakeItem(cakeId);
+    }
+
     function saveQuickEditPrice() {
       const cakeId = document.getElementById('quick-edit-cake-id').value;
       const newPrice = document.getElementById('quick-edit-price-input').value.trim();
@@ -5378,10 +5411,28 @@
     }
 
     function resetAllPriceOverrides() {
-      if (!confirm('Reset all edited prices back to their original bakery defaults?')) return;
+      const deletedCount = getDeletedCakeIds().length;
+      const confirmMsg = deletedCount > 0
+        ? `Reset all edited prices AND restore ${deletedCount} deleted cake design(s) back to original bakery defaults?`
+        : 'Reset all edited prices back to their original bakery defaults?';
+
+      if (!confirm(confirmMsg)) return;
       localStorage.removeItem('redking_catalog_overrides');
+      localStorage.removeItem('redking_deleted_cakes');
       refreshCakeCatalog();
-      alert('✓ All prices have been reset to bakery defaults.');
+      alert('✓ All bakery prices and gallery items have been reset to defaults.');
+    }
+
+    function restoreDeletedCakes() {
+      const deletedCount = getDeletedCakeIds().length;
+      if (deletedCount === 0) {
+        alert('No deleted cakes to restore.');
+        return;
+      }
+      if (!confirm(`Restore ${deletedCount} deleted cake design(s) back to your live gallery?`)) return;
+      localStorage.removeItem('redking_deleted_cakes');
+      refreshCakeCatalog();
+      alert(`✓ Successfully restored ${deletedCount} cake design(s) back to the gallery.`);
     }
 
     function filterAdminGalleryCategory(cat, btn) {
@@ -5399,11 +5450,26 @@
       const listEl = document.getElementById('admin-uploaded-list');
       const badgeEl = document.getElementById('admin-custom-count-badge');
       const labelEl = document.getElementById('admin-gallery-count-label');
+      const restoreBtn = document.getElementById('admin-restore-deleted-btn');
       if (!listEl) return;
 
       const customCakes = getCustomCakes();
+      const deletedCount = getDeletedCakeIds().length;
+
       if (badgeEl) badgeEl.textContent = customCakes.length;
-      if (labelEl) labelEl.textContent = cakeCatalog.length + ' Cakes Total';
+      if (labelEl) {
+        labelEl.textContent = deletedCount > 0 
+          ? `${cakeCatalog.length} Cakes (${deletedCount} deleted)` 
+          : `${cakeCatalog.length} Cakes Total`;
+      }
+      if (restoreBtn) {
+        if (deletedCount > 0) {
+          restoreBtn.classList.remove('hidden');
+          restoreBtn.textContent = `Restore (${deletedCount} deleted)`;
+        } else {
+          restoreBtn.classList.add('hidden');
+        }
+      }
 
       // Filter cakes according to selected category tab
       let displayCakes = cakeCatalog;
@@ -5470,29 +5536,50 @@
               <span>Save</span>
             </button>
 
-            ${cake.id.startsWith('custom-') ? `
-              <button type="button" onclick="deleteCustomCake('${cake.id}')" title="Delete custom cake"
-                      class="px-2.5 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold transition-colors cursor-pointer flex items-center justify-center">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="3 6 5 6 21 6"/>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                </svg>
-              </button>
-            ` : ''}
+            <button type="button" onclick="deleteCakeItem('${cake.id}')" title="Delete this cake from gallery"
+                    class="px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 border border-rose-200 text-xs font-bold transition-all cursor-pointer flex items-center gap-1 shadow-2xs">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                <line x1="10" y1="11" x2="10" y2="17"/>
+                <line x1="14" y1="11" x2="14" y2="17"/>
+              </svg>
+              <span>Delete</span>
+            </button>
           </div>
         </div>`).join('');
     }
 
+    function deleteCakeItem(cakeId) {
+      const cake = cakeCatalog.find(c => c.id === cakeId) || baseCakeCatalog.find(c => c.id === cakeId);
+      const refStr = cake && cake.refCode ? `Ref: #${cake.refCode}` : '';
+      const nameStr = cake ? (cake.badge || cake.title || 'this design') : 'this item';
+      const label = refStr ? `${refStr} (${nameStr})` : nameStr;
+
+      if (!confirm(`Are you sure you want to delete ${label} from your live bakery gallery?\n\n(You can restore bakery default designs anytime by clicking "Restore" or "Reset Defaults")`)) {
+        return;
+      }
+
+      // If it's a custom uploaded cake, remove from custom cakes store
+      if (cakeId.startsWith('custom-')) {
+        let customCakes = getCustomCakes();
+        customCakes = customCakes.filter(c => c.id !== cakeId);
+        localStorage.setItem('redking_custom_cakes', JSON.stringify(customCakes));
+      }
+
+      // Add to deleted cake IDs list in localStorage so it stays deleted across reloads
+      let deletedIds = getDeletedCakeIds();
+      if (!deletedIds.includes(cakeId)) {
+        deletedIds.push(cakeId);
+        localStorage.setItem('redking_deleted_cakes', JSON.stringify(deletedIds));
+      }
+
+      refreshCakeCatalog();
+      alert(`✓ ${label} has been removed from the gallery.`);
+    }
+
     function deleteCustomCake(cakeId) {
-      if (!confirm('Are you sure you want to remove this photo from the live gallery?')) return;
-
-      let customCakes = getCustomCakes();
-      customCakes = customCakes.filter(c => c.id !== cakeId);
-      localStorage.setItem('redking_custom_cakes', JSON.stringify(customCakes));
-      cakeCatalog = [...customCakes, ...baseCakeCatalog];
-
-      filterCakes();
-      renderAdminUploadedList();
+      deleteCakeItem(cakeId);
     }
 
     // --- ORDERS LOG TRACKER ---
