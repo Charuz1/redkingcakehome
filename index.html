@@ -1719,8 +1719,8 @@
                               class="block text-xs font-bold text-brand-espresso uppercase tracking-wider mb-1">
                               Expiry Date <span class="text-brand-crimson">*</span>
                             </label>
-                            <input type="text" id="card-expiry-input" placeholder="MM / YY" maxlength="5"
-                              oninput="handleCardExpiryInput(this)"
+                            <input type="text" id="card-expiry-input" placeholder="MM / YY" maxlength="7"
+                              oninput="handleCardExpiryInput(this)" onkeydown="handleCardExpiryKeydown(this, event)"
                               class="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 font-mono text-xs focus:border-brand-crimson bg-brand-ivory/40">
                           </div>
                           <div>
@@ -4508,15 +4508,37 @@
     }
 
     function handleCardExpiryInput(input) {
-      let val = input.value.replace(/\D/g, '').substring(0, 4);
+      let val = input.value.replace(/\D/g, '');
+      if (val.length > 4) val = val.substring(0, 4);
+
       if (val.length >= 2) {
-        input.value = val.substring(0, 2) + ' / ' + val.substring(2);
+        let month = parseInt(val.substring(0, 2), 10);
+        if (month > 12) month = 12;
+        if (month === 0) month = 1;
+        const monthStr = month < 10 ? '0' + month : String(month);
+        const yearStr = val.substring(2);
+        input.value = yearStr ? `${monthStr} / ${yearStr}` : `${monthStr} / `;
       } else {
         input.value = val;
       }
+
       const previewExp = document.getElementById('preview-card-expiry');
       if (previewExp) {
         previewExp.textContent = input.value || 'MM/YY';
+      }
+    }
+
+    function handleCardExpiryKeydown(input, e) {
+      if (e.key === 'Backspace') {
+        const val = input.value;
+        if (val.endsWith(' / ')) {
+          e.preventDefault();
+          input.value = val.substring(0, val.length - 3);
+          const previewExp = document.getElementById('preview-card-expiry');
+          if (previewExp) {
+            previewExp.textContent = input.value || 'MM/YY';
+          }
+        }
       }
     }
 
@@ -4622,8 +4644,9 @@
         return;
       }
 
-      if (!exp || exp.length < 5) {
-        alert('Please enter a valid card expiration date (MM / YY).');
+      const expDigits = exp ? exp.replace(/\D/g, '') : '';
+      if (!exp || expDigits.length < 4) {
+        alert('Please enter a valid card expiration date including month and year (MM / YY).');
         document.getElementById('card-expiry-input')?.focus();
         return;
       }
